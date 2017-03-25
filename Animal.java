@@ -1,5 +1,6 @@
+// Nama :  M. Ferdi Ghozali
+// NIM : 13515014
 import java.util.*;
-
 /** @class Animal
   * Class Animal adalah abstract class yang menjadi base class dari kelas 
   * turunan LandAnimal. WaterAnimal, dan Flying Animal
@@ -17,7 +18,7 @@ public abstract class Animal implements Renderable {
   protected String species_name;
   //ctor
   public Animal() {
-	  symbol_on_map = (char)'.';
+	  symbol_on_map = '.';
 	  tamed = true;
   }
 	/** @brief Constructor.
