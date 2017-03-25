@@ -26,7 +26,4 @@ public class Point {
     public void SetY(int y_) {
       y = y_;
     }
-
-
 }
-
