@@ -1,3 +1,4 @@
+import java.util.concurrent.TimeUnit;
 public class IkanCupang extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -13,12 +14,20 @@ implements AnimalClass, AnimalFoodType
     species_name = "IkanCupang";
     animal_type[0] = "Water";
   }
-   public void Interact() {
+  public void Interact() {
     System.out.println("Ikan, ikan apa yang paling jelek??");
-    sleep(2));  
-    System.out.println("I...kan kamu jelek")
-    sleep(1);
-    System.out.println("maap..")
+    try {
+        Thread.sleep(2000);
+    } 
+    catch(InterruptedException error) {
+    } 
+    System.out.println("I...kan kamu jelek");
+    try {
+        Thread.sleep(1000);
+    } 
+    catch(InterruptedException error) {
+    } 
+    System.out.println("maap..");
   }
   public boolean IsEnemy(String animal) {
     return false;
