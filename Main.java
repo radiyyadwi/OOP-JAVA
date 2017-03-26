@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Main {
-  public static int Main() {
-    Driver d = new Driver();
-    Scanner s = new Scanner(System.in);
+  public static void main(String[] args) {
+    Driver driver = new Driver();
+    Scanner scanner = new Scanner(System.in);
     int input;
-    d.PrintTitle();
-    d.DisplayVirtualZoo();
+    driver.PrintTitle();
+    driver.DisplayVirtualZoo();
     do {
       System.out.print("\n");
       System.out.print("Pilihan fitur : ");
@@ -22,20 +22,20 @@ public class Main {
       System.out.print("5. Exit program");
       System.out.print("\n");
       System.out.print("Masukkan pilihan : ");
-      input = s.nextInt();
+      input = scanner.nextInt();
       if (input == 1) {
         System.out.print("\n");
-        d.PrintAllAnimal();
+        driver.PrintAllAnimal();
       }
       else {
         if (input == 2) {
           System.out.print("\n");
-          d.HitungMakanan();
+          driver.HitungMakanan();
         }
         else {
           if (input == 3) {
             System.out.print("\n");
-            d.TourVirtualZoo();
+            driver.TourVirtualZoo();
           }
           else {
             if (input == 4) {
@@ -44,17 +44,17 @@ public class Main {
               int y1;
               int y2;
               System.out.print("Masukan x1: ");
-              x1 = s.nextInt();
+              x1 = scanner.nextInt();
               System.out.print("Masukan y1: ");
-              y1 = s.nextInt();
+              y1 = scanner.nextInt();
               System.out.print("Masukan x2: ");
-              x2 = s.nextInt();
+              x2 = scanner.nextInt();
               System.out.print("Masukan y2: ");
-              y2 = s.nextInt();
+              y2 = scanner.nextInt();
               if (x1 >= 0 && x2 >= 0 && x2 > x1 && y2 > y1) {
                 Point P1 = new Point(x1, y1);
                 Point P2 = new Point(x2, y2);
-                d.DisplayVirtualZoo(P1, P2);
+                driver.DisplayVirtualZoo(P1, P2);
               }
               else {
                 System.out.print("Input salah.");
@@ -71,6 +71,5 @@ public class Main {
         }
       }
     } while (input != 5);
-    return 0;
   }
 }

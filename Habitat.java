@@ -22,13 +22,13 @@ public class Habitat extends Cell {
 	public void Render(boolean oncage) {
 		if(oncage) {
 			if(habitat_type == "Water") {
-				System.out.print ("w");
+				System.out.print ("W");
 			} else
 			if(habitat_type == "Land") {
-				System.out.print ("l");
+				System.out.print ("L");
 			} else
 			if(habitat_type == "Air") {
-				System.out.print ("a");
+				System.out.print ("A");
 		} else {
 			Render();
 		}

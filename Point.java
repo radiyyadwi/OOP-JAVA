@@ -1,3 +1,7 @@
+//File: Point.java
+//Author: David Theosaksomo
+//NIM: 13515131
+
 //Kelas Point
 public class Point {
 
@@ -5,12 +9,12 @@ public class Point {
     protected int y;//ordinat
     //ctor,cctor,dtor
     public Point() {
-      x = 0;
-      y = 0;
+      this.x = 0;
+      this.y = 0;
     }
-    public Point(int x_,int y_) {
-      x = x_;
-      y = y_;
+    public Point(int x,int y) {
+      this.x = x;
+      this.y = y;
     }
     //getter
     public int GetX() {
@@ -20,10 +24,11 @@ public class Point {
       return y;
     }
     //setter
-    public void SetX(int x_) {
-      x = x_;
+    public void SetX(int x) {
+      this.x = x;
     }
-    public void SetY(int y_) {
-      y = y_;
+    public void SetY(int y) {
+      this.y = y;
     }
 }
+

@@ -18,6 +18,9 @@ public abstract class Animal implements Renderable {
   protected String species_name;
   //ctor
   public Animal() {
+    for (int i = 0;i < 3;i++) {
+      animal_type[i] = new String();
+    }
 	  symbol_on_map = '.';
 	  tamed = true;
   }
@@ -30,6 +33,9 @@ public abstract class Animal implements Renderable {
 	*/
   // ctor berparameter
   public Animal(char sym_on_map, boolean is_tamed) {
+    for (int i = 0;i < 3;i++) {
+      animal_type[i] = new String();
+    }
 	  symbol_on_map = sym_on_map;
 	  tamed = is_tamed;
   }

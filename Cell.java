@@ -1,8 +1,11 @@
-//Nama : Radiyya Dwisaputra
-//NIM : 13515023
+//File: Cell.java
+//Author: David Theosaksomo
+//NIM: 13515131
+
 public abstract class Cell implements Renderable {
   protected String cell_type;
-  
+  public Cell() {
+  }
   public Cell(String tipe) {
     cell_type = tipe;
   }
@@ -16,6 +19,4 @@ public abstract class Cell implements Renderable {
   public abstract void Render(boolean oncage);
   public abstract void Render();
   public abstract void Enter();
-  
-
 }

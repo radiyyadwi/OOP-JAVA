@@ -17,7 +17,7 @@ implements AnimalClass, AnimalFoodType
     position.SetX(-1);
     position.SetY(-1);
     species_name = "Kiwi";
-    animal_type[0] = "Flying";
+    animal_type[0] = "Land";
   }
    public void Interact() {
     System.out.print("aku gak gendut, cuman agak bulet dikit");
