@@ -1,3 +1,6 @@
+// File : Facility.java
+// Author : Prama Legawa Halqavi (13515132)
+
 public abstract class Facility extends Cell {
   protected final String facility_name; //  nama fasilitas
   protected final String facility_type; //  nama fasilitas

@@ -1,3 +1,6 @@
+// File : Road.java
+// Author : Prama Legawa Halqavi (13515132)
+
 public class Road extends Facility {
    // ctor tanpa parameter. 
   public Road() {

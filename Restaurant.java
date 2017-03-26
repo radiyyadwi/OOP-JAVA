@@ -1,3 +1,6 @@
+// File : Restaurant.java
+// Author : Prama Legawa Halqavi (13515132)
+
 import java.util.Scanner;
 
 public class Restaurant extends Facility {

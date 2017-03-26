@@ -1,3 +1,6 @@
+// File : Untamed.java
+// Author : Prama Legawa Halqavi (13515132)
+
 public class Untamed {
   private String[] enemy_list;
   private int n_enemy = 0;
