@@ -11,8 +11,8 @@ public abstract class Animal implements Renderable {
     */
   protected final char symbol_on_map;
   protected Point position = new Point();
-  protected float weight;
-  protected float food_per_day;
+  protected double weight;
+  protected double food_per_day;
   protected final boolean tamed;
   protected String[] animal_type = new String[3];
   protected String species_name;
@@ -39,7 +39,7 @@ public abstract class Animal implements Renderable {
   public final String GetSpeciesName() {
     return species_name;
   }
-  public final float GetFoodNum() {
+  public final double GetFoodNum() {
     return food_per_day;
   }
   public final void SetPosition(Point p) {
