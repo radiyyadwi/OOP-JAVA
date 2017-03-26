@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 import java.util.concurrent.TimeUnit;
 public class IkanCupang extends Animal
 implements AnimalClass, AnimalFoodType
@@ -7,6 +9,7 @@ implements AnimalClass, AnimalFoodType
   private final String kelas = "Actinopterygii";
   private final String deskripsi = "Actinopterygii adalah ikan yang memiliki sirip kipas";
   public IkanCupang() {
+    super('i',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);

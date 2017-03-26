@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 /** @brief Kelas objek TikusMondokBerhitungBintang yang mewakili hewan TikusMondokBerhitungBintang. 
   * objek akan di masukkan ke dalam zoo.
   */
@@ -13,6 +15,7 @@ implements AnimalClass, AnimalFoodType
     * Terbentuk objek TikusMondokBerhitungBintang.
     */ 
   public TikusMondokBerhitungBintang() {
+    super('t',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);

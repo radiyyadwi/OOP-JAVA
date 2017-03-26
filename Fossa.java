@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 public class Fossa extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -7,12 +9,13 @@ implements AnimalClass, AnimalFoodType
   private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " +
   "yang ciri utama nya memiliki kelenjar susu";
   public Fossa() {
+    super('f',false);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);
     position.SetY(-1);
     species_name = "Fossa";
-    animal_type[0] = "Flying";
+    animal_type[0] = "Land";
   }
    public void Interact() {
     System.out.println("Hi I'm Fossa!");

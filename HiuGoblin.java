@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 public class HiuGoblin extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -6,6 +8,7 @@ implements AnimalClass, AnimalFoodType
   private final String kelas = "Chondrichtyes";
   private final String deskripsi = "Chondrichthyes merupakan ikan dengan tulang rawan";
   public HiuGoblin() {
+    super('h',false);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);

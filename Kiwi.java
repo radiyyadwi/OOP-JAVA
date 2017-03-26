@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 public class Kiwi extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -9,12 +11,13 @@ implements AnimalClass, AnimalFoodType
 
   
   public Kiwi() {
+    super('w',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);
     position.SetY(-1);
     species_name = "Kiwi";
-    animal_type[0] = "Water";
+    animal_type[0] = "Flying";
   }
    public void Interact() {
     System.out.print("aku gak gendut, cuman agak bulet dikit");

@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 public class BerangBerang extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -7,6 +9,7 @@ implements AnimalClass, AnimalFoodType
   private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " +
   "yang ciri utama nya memiliki kelenjar susu";
   public BerangBerang() {
+    super('b',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);

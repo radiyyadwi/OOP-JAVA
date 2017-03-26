@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 public class BurungCekakak extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -7,6 +9,7 @@ implements AnimalClass, AnimalFoodType
   private final String deskripsi = "Aves merupakan kelas kelompok hewan " + 
   "vertebrata yang memiliki bulu dan sayap";
   public BurungCekakak() {
+    super('c',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);

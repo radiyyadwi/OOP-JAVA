@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 /** @brief Kelas objek SemutPanda yang mewakili hewan SemutPanda. 
   * objek akan di masukkan ke dalam zoo.
   */
@@ -13,13 +15,13 @@ implements AnimalClass, AnimalFoodType
     * Terbentuk objek SemutPanda.
     */ 
   public SemutPanda() {
+    super('s',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);
     position.SetY(-1);
     species_name =  "SemutPanda";
     animal_type[0] = "Land";
-    animal_type[1] = "Water";
   } 
   /** @brief Method Interact objek SemutPanda.
     * Menampilkan keluaran saat adanya interaksi.

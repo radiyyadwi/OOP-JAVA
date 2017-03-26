@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 /** @brief Kelas objek Kungkang yang mewakili hewan Kungkang. 
   * objek akan di masukkan ke dalam zoo.
   */
@@ -13,12 +15,13 @@ implements AnimalClass, AnimalFoodType
     * Terbentuk objek Kungkang.
     */ 
   public Kungkang() {
+    super('k',true);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);
     position.SetY(-1);
     species_name = "Kungkang";
-    animal_type[0] = "Water";
+    animal_type[0] = "Land";
   } 
   /** @brief Method Interact objek Kungkang.
     * Menampilkan keluaran saat adanya interaksi.

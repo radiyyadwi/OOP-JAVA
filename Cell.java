@@ -1,3 +1,5 @@
+//Nama : Radiyya Dwisaputra
+//NIM : 13515023
 public abstract class Cell implements Renderable {
   protected String cell_type;
   
