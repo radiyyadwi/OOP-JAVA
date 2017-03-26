@@ -1,6 +1,11 @@
+//File: Cell.java
+//Author: David Theosaksomo
+//NIM: 13515131
+
 public abstract class Cell implements Renderable {
   protected String cell_type;
-  
+  public Cell() {
+  }
   public Cell(String tipe) {
     cell_type = tipe;
   }
