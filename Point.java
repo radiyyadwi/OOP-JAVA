@@ -30,7 +30,5 @@ public class Point {
     public void SetY(int y) {
       this.y = y;
     }
-
-
 }
 

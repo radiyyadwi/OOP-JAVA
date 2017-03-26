@@ -2,7 +2,6 @@
 //Author: David Theosaksomo
 //NIM: 13515131
 
-interface Renderable
-{
+interface Renderable{
   public void Render();
 }

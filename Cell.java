@@ -19,6 +19,4 @@ public abstract class Cell implements Renderable {
   public abstract void Render(boolean oncage);
   public abstract void Render();
   public abstract void Enter();
-  
-
 }
