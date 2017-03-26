@@ -10,5 +10,5 @@ public class Road extends Facility {
   public Road(String st) {
     super("", st);
   }
-  public final void Enter() {}
+  public void Enter() {}
 }

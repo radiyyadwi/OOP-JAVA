@@ -26,11 +26,11 @@ public abstract class Facility extends Cell {
   }
   /* * @brief mengakses type fasilitas 
      */
-  public final String GetFacHabType() {
+  public String GetFacHabType() {
     return facility_type;
   }
  /* * @brief mengakses nama fasilitas */
-  public final String GetFacilityName() {
+  public String GetFacilityName() {
     return facility_name;
   }
  /* * @brief menggambarkan objek ke layar */
