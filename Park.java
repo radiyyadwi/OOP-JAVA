@@ -95,5 +95,6 @@ public class Park extends Facility {
     System.out.print(wahana[x - 1]);
     System.out.print(", sangat seru hingga anda ingin naik lagi!");
     System.out.print("\n");
+    s.close();
   }
 }

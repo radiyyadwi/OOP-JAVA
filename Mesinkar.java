@@ -1,4 +1,3 @@
-import java.util.*;
 import java.io.FileReader;
 import java.io.IOException;
 // Nama : M. Ferdi Ghozali

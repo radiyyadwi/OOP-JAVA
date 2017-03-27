@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
+/** Class yang menunjukkan main program
+ * @author David Theosaksomo/13515131
+ * @version 1.0, March 2017
+ */
 public class Main {
+  /** Prosedur untuk menjalankan program
+   *  mulai dari pilihan menu
+   * @param args
+   */
   public static void main(String[] args) {
     Driver driver = new Driver();
     Scanner scanner = new Scanner(System.in);
@@ -71,5 +79,6 @@ public class Main {
         }
       }
     } while (input != 5);
+    scanner.close();
   }
 }
