@@ -1,3 +1,5 @@
+
+
 //Nama : Radiyya Dwisaputra
 //NIM : 13515023
 /** @brief Kelas objek Orca yang mewakili hewan Orca. 
@@ -6,6 +8,8 @@
 public class Orca extends Animal
 implements AnimalClass, AnimalFoodType
 {
+  private String[] enemy_list;
+  private int n_enemy;
   private final double defaultweight = 7700;
   private final String food_type = "Carnivore";
   private final String kelas = "Mammal";
@@ -15,13 +19,16 @@ implements AnimalClass, AnimalFoodType
     * Terbentuk objek Orca.
     */ 
   public Orca() {
-    super('r',true);
+    super('r',false);
     weight = defaultweight;
     food_per_day = weight/4;
     position.SetX(-1);
     position.SetY(-1);
     species_name = "Orca";
     animal_type[0] = "Water";
+    AddEnemy("IkanCupang");
+    AddEnemy("IkanKalajengking");
+    
   } 
   /** @brief Method Interact objek Orca.
     * Menampilkan keluaran saat adanya interaksi.
@@ -36,7 +43,25 @@ implements AnimalClass, AnimalFoodType
     * @param hewan yang akan di cek.
     */
   public boolean IsEnemy(String animal) {
-    return false;
+    int i = 0;
+    boolean found = false;
+    while (i < 20 && !found) {
+      if (animal == enemy_list[i]) {
+        found = true;
+      }
+    i++;
+    }
+    return found;
+  }
+  /**
+   * 
+   * @param animal_name
+   */
+  public void AddEnemy(String animal_name) {
+    if (n_enemy < 19) {
+      enemy_list[n_enemy] = animal_name;
+      n_enemy++;
+    }
   }
   /** @brief Method GedFoodType objek Orca.
     * Memperoleh tipe makanan yang dimakan oleh hewan.

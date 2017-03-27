@@ -1,6 +1,4 @@
-//File: Point.java
-//Author: David Theosaksomo
-//NIM: 13515131
+
 
 //Kelas Point
 public class Point {

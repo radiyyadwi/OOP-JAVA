@@ -93,6 +93,7 @@ public class Restaurant extends Facility {
     System.out.print(menu[x - 1]);
     System.out.print(", rasanya lezat");
     System.out.print("\n");
+    s.close();
   }
 }
 

@@ -1,5 +1,12 @@
+
+
 //Nama : Radiyya Dwisaputra
 //NIM : 13515023
+/**
+  * Class yang menunjukkan hewan real BerangBerang
+  * @author Radiyya Dwisaputra/13515023
+  * @version 1.0, March 2017
+  */
 public class BerangBerang extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -8,6 +15,9 @@ implements AnimalClass, AnimalFoodType
   private final String kelas = "Mammal";
   private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " +
   "yang ciri utama nya memiliki kelenjar susu";
+  /** Constructor
+    *  @see java.lang.reflect.Constructor
+    */
   public BerangBerang() {
     super('b',true);
     weight = defaultweight;
@@ -18,22 +28,44 @@ implements AnimalClass, AnimalFoodType
     animal_type[0] = "Water";
     animal_type[1] = "Land";
   }
+  /** Interaction BerangBerang kepada pengunjung
+    * @see Animal#Interact()
+    */
    public void Interact() {
     System.out.println( "sungai kotor gini gimana mbikin bendungan nya coba? -_-");
   }
+  /** Pengecekan apakah String animal enemy atau bukan
+   * @param animal string animal yang akan dicek
+   * @see Animal#IsEnemy(java.lang.String)
+   */
   public boolean IsEnemy(String animal) {
     return false;
   }
+  /** Memperoleh type makanan animal
+    * 
+    * @see Animal#GetFoodType()
+    * @see AnimalFoodType#GetFoodType()
+    */
   public String GetFoodType(){
     return food_type;
   }
+  /** Memperoleh nama kelas dari animal
+   * 
+   * @see AnimalClass#GetClassName()
+   */
   public String GetClassName(){
     return kelas;
   }
+  /** Memperoleh deskripsi animal
+   * 
+   * @see AnimalClass#GetDeskripsi()
+   */
   public String GetDeskripsi(){
     return deskripsi;
   }
-
+  /** Menuliskan deskripsi hewan
+   * 
+   */
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

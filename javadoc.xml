@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" author="true" classpath="." destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.8" sourcefiles="Road.java,ElangBotak.java,IkanSungutGanda.java,BurungCekakak.java,SemutPanda.java,Cell.java,Habitat.java,Kungkang.java,TikusMondokBerhidungBintang.java,LandHabitat.java,Okapi.java,Angsa.java,Point.java,Entrance.java,Animal.java,AnimalFoodType.java,BerangBerang.java,BurungJulang.java,Orca.java,UnTamed.java,Facility.java,Main.java,AirHabitat.java,Undan.java,Fossa.java,Restaurant.java,Narwhal.java,AnimalClass.java,TikusMondokBerhitungBintang.java,Platypus.java,HiuGoblin.java,ScreenCleaner.java,IkanKalajengking.java,WaterHabitat.java,Kiwi.java,Exit.java,Driver.java,Cage.java,Yak.java,Zoo.java,Park.java,IkanCupang.java,Mesinkar.java,Renderable.java" sourcepath="." splitindex="true" use="true" version="true"/>
+    </target>
+</project>
