@@ -74,5 +74,6 @@ public class Main {
         }
       }
     } while (input != 5);
+    scanner.close();
   }
 }

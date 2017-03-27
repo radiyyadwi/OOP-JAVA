@@ -8,7 +8,10 @@ package virtualzoo.animal.realanimal;
 import virtualzoo.animal.Animal;
 import virtualzoo.animal.animalclass.AnimalClass;
 import virtualzoo.animal.animalfoodtype.AnimalFoodType;
-
+/** Class yang menunjukkan hewan real Undan
+ * @author Radiyya Dwisaputra/13515023
+ * @version 1.0, March 2017
+ */
 public class Undan extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -17,9 +20,9 @@ implements AnimalClass, AnimalFoodType
   private final String kelas = "Aves";
   private final String deskripsi = "Aves merupakan kelas kelompok hewan " + 
   "vertebrata yang memiliki bulu dan sayap";
-  /** @brief Ctor objek Undan.
-    * Terbentuk objek Undan.
-    */ 
+  /** Constructor
+   *  @see java.lang.reflect.Constructor
+   */
   public Undan() {
     super('u',true);
     weight = defaultweight;
@@ -29,35 +32,34 @@ implements AnimalClass, AnimalFoodType
     species_name =  "Undan";
     animal_type[0] = "Flying";
   } 
-  /** @brief Method Interact objek Undan.
-    * Menampilkan keluaran saat adanya interaksi.
-    * Interaksi dilakukan dengan pengunjung.
-    */
+  /** Interaction Undan kepada pengunjung
+   * @see Animal#Interact()
+   */
    public void Interact() {
     System.out.println("Aku merupakan Burung Undan, banyak yang memanggilku " + 
     "burung Pelikan aku suka banget sama kamu eh maksudku ikan");
   }
-  /** @brief Method IsEnemy objek Undan.
-    * Mengecek hewan lain apakah musuh Undan atau tidak.
-    * Musuh ialah yang tidak dapat diletakkan 1 kandang.
-    * @param hewan yang akan di cek.
-    */
-
-  /** @brief Method GedFoodType objek Undan.
-    * Memperoleh tipe makanan yang dimakan oleh hewan.
+   /** Memperoleh type makanan animal
+    * @see Animal#GetFoodType()
+    * @see AnimalFoodType#GetFoodType()
     */
   public String GetFoodType(){
     return food_type;
   }
+  /** Memperoleh nama kelas dari animal
+   * @see AnimalClass#GetClassName()
+   */
   public String GetClassName(){
     return kelas;
   }
+  /** Memperoleh deskripsi animal 
+   * @see AnimalClass#GetDeskripsi()
+   */
   public String GetDeskripsi(){
     return deskripsi;
   }
-  /** @brief Method Deskripsi objek Undan.
-      * Menghasilkan deskripsi tentang hewan.
-      */
+  /** Menuliskan deskripsi hewan
+   */
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

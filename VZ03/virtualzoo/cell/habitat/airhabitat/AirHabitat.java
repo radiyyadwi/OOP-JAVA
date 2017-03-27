@@ -1,5 +1,7 @@
 // File : AirHabitat.java
 // Author : Prama Legawa Halqavi (13515132)
+package virtualzoo.cell.habitat.airhabitat;
+import virtualzoo.cell.habitat.Habitat;
  /**
   * Kelas yang menunjukkan habitat udara
   * @author Prama Legawa Halqavi/13515132
