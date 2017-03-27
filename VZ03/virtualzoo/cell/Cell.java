@@ -1,6 +1,9 @@
 //File: Cell.java
 //Author: David Theosaksomo
 //NIM: 13515131
+package virtualzoo.cell;
+
+import virtualzoo.renderable.Renderable;
 
 public abstract class Cell implements Renderable {
   protected String cell_type;

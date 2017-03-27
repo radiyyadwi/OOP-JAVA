@@ -1,7 +1,7 @@
 //File: Point.java
 //Author: David Theosaksomo
 //NIM: 13515131
-
+package virtualzoo.util.point;
 //Kelas Point
 public class Point {
 

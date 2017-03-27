@@ -1,7 +1,8 @@
 //File: Renderable.java
 //Author: David Theosaksomo
 //NIM: 13515131
+package virtualzoo.renderable;
 
-interface Renderable{
+public interface Renderable{
   public void Render();
 }
