@@ -1,5 +1,6 @@
 //Nama : Radiyya Dwisaputra
 //NIM : 13515023
+
 package virtualzoo.animal.realanimal;
 
 import virtualzoo.animal.Animal;
@@ -9,56 +10,69 @@ import virtualzoo.animal.animalfoodtype.AnimalFoodType;
  * @author Radiyya Dwisaputra/13515023
  * @version 1.0, March 2017
  */
+
 public class Kiwi extends Animal
-implements AnimalClass, AnimalFoodType {
-  private final double defaultweight = 2.4;
-  private final String food_type = "Carnivore";
+    implements AnimalClass, AnimalFoodType {
+  private final double defaultWeight = 2.4;
+  private final String foodType = "Carnivore";
   private final String kelas = "Aves";
-  private final String deskripsi = "Aves merupakan kelas kelompok hewan " + 
-  "vertebrata yang memiliki bulu dan sayap";
-  /** Constructor
+  private final String deskripsi = "Aves merupakan kelas kelompok hewan " 
+                                    + "vertebrata yang memiliki bulu dan sayap";
+
+  /** Constructor.
    *  @see java.lang.reflect.Constructor
    */
+
   public Kiwi() {
     super('w',true);
-    weight = defaultweight;
-    food_per_day = weight/4;
-    position.SetX(-1);
-    position.SetY(-1);
-    species_name = "Kiwi";
-    animal_type[0] = "Land";
+    weight = defaultWeight;
+    foodPerDay = weight / 4;
+    position.setX(-1);
+    position.setY(-1);
+    speciesName = "Kiwi";
+    animalType[0] = "Land";
   }
-  /** Interaction Kiwi kepada pengunjung
-   * @see Animal#Interact()
+  /** Interaction Kiwi kepada pengunjung.
+   * @see Animal#interact()
    */
-   public void Interact() {
+
+  @Override
+   public void interact() {
     System.out.print("aku gak gendut, cuman agak bulet dikit");
   }
-   /** Memperoleh type makanan animal
-    * @see Animal#GetFoodType()
-    * @see AnimalFoodType#GetFoodType()
+  /** Memperoleh type makanan animal.
+    * @see Animal#getFoodType()
+    * @see AnimalFoodType#getFoodType()
     */
-  public String GetFoodType() {
-    return food_type;
+
+  @Override
+  public String getFoodType() {
+    return foodType;
   }
-  /** Memperoleh nama kelas dari animal
-   * @see AnimalClass#GetClassName()
+  /** Memperoleh nama kelas dari animal.
+   * @see AnimalClass#getClassName()
    */
-  public String GetClassName() {
+
+  @Override
+  public String getClassName() {
     return kelas;
   }
-  /** Memperoleh deskripsi animal 
-   * @see AnimalClass#GetDeskripsi()
+  /** Memperoleh deskripsi animal.
+   * @see AnimalClass#getDeskripsi()
    */
-  public String GetDeskripsi() {
+
+  @Override
+  public String getDeskripsi() {
     return deskripsi;
   }
-  /** Menuliskan deskripsi hewan
+  /** Menuliskan deskripsi hewan.
    */
-  public void Deskripsi(){
-    System.out.print(super.GetSpeciesName());
+
+  @Override
+  public void deskripsi() {
+    System.out.print(super.getSpeciesName());
     System.out.print(" termasuk dalam kelas ");
-    System.out.println(GetClassName());
+    System.out.println(getClassName());
     System.out.println(deskripsi);
   }
 }

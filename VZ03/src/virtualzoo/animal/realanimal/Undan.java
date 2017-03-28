@@ -3,67 +3,79 @@
 /** @brief Kelas objek Undan yang mewakili hewan Undan. 
   * objek akan di masukkan ke dalam zoo.
   */
+
 package virtualzoo.animal.realanimal;
 
 import virtualzoo.animal.Animal;
 import virtualzoo.animal.animalclass.AnimalClass;
 import virtualzoo.animal.animalfoodtype.AnimalFoodType;
-/** Class yang menunjukkan hewan real Undan
+/** Class yang menunjukkan hewan real Undan.
  * @author Radiyya Dwisaputra/13515023
  * @version 1.0, March 2017
  */
+
 public class Undan extends Animal
-implements AnimalClass, AnimalFoodType
-{
-  private final double defaultweight = 5;
-  private final String food_type = "Carnivore";
+    implements AnimalClass, AnimalFoodType {
+  private final double defaultWeight = 5;
+  private final String foodType = "Carnivore";
   private final String kelas = "Aves";
-  private final String deskripsi = "Aves merupakan kelas kelompok hewan " + 
-  "vertebrata yang memiliki bulu dan sayap";
-  /** Constructor
+  private final String deskripsi = "Aves merupakan kelas kelompok hewan " 
+                                    + "vertebrata yang memiliki bulu dan sayap";
+  /** Constructor.
    *  @see java.lang.reflect.Constructor
    */
+
   public Undan() {
     super('u',true);
-    weight = defaultweight;
-    food_per_day = weight/4;
-    position.SetX(-1);
-    position.SetY(-1);
-    species_name =  "Undan";
-    animal_type[0] = "Flying";
+    weight = defaultWeight;
+    foodPerDay = weight / 4;
+    position.setX(-1);
+    position.setY(-1);
+    speciesName =  "Undan";
+    animalType[0] = "Flying";
   } 
-  /** Interaction Undan kepada pengunjung
-   * @see Animal#Interact()
+  /** Interaction Undan kepada pengunjung.
+   * @see Animal#interact()
    */
-   public void Interact() {
-    System.out.println("Aku merupakan Burung Undan, banyak yang memanggilku " + 
-    "burung Pelikan aku suka banget sama kamu eh maksudku ikan");
+
+  @Override
+   public void interact() {
+    System.out.println("Aku merupakan Burung Undan, banyak yang memanggilku " 
+                        +  "burung Pelikan aku suka banget sama kamu eh maksudku ikan");
   }
-   /** Memperoleh type makanan animal
-    * @see Animal#GetFoodType()
-    * @see AnimalFoodType#GetFoodType()
+  /** Memperoleh type makanan animal.
+    * @see Animal#getFoodType()
+    * @see AnimalFoodType#getFoodType()
     */
-  public String GetFoodType(){
-    return food_type;
+
+  @Override
+  public String getFoodType() {
+    return foodType;
   }
-  /** Memperoleh nama kelas dari animal
-   * @see AnimalClass#GetClassName()
+  /** Memperoleh nama kelas dari animal.
+   * @see AnimalClass#getClassName()
    */
-  public String GetClassName(){
-    return kelas;
+
+  @Override
+  public String getClassName() {
+    return kelas; 
   }
-  /** Memperoleh deskripsi animal 
-   * @see AnimalClass#GetDeskripsi()
+  /** Memperoleh deskripsi animal.
+   * @see AnimalClass#getDeskripsi()
    */
-  public String GetDeskripsi(){
+
+  @Override
+  public String getDeskripsi() {
     return deskripsi;
   }
-  /** Menuliskan deskripsi hewan
+  /** Menuliskan deskripsi hewan.
    */
-  public void Deskripsi(){
-    System.out.print(super.GetSpeciesName());
+
+  @Override
+  public void deskripsi() {
+    System.out.print(super.getSpeciesName());
     System.out.print(" termasuk dalam kelas ");
-    System.out.println(GetClassName());
+    System.out.println(getClassName());
     System.out.println(deskripsi);
   }
 }

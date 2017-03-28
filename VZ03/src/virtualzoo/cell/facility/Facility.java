@@ -1,68 +1,77 @@
+// Nama File : Road.java
+// N0 : Prama Halqavi (13515132)
+
 package virtualzoo.cell.facility;
 
 import virtualzoo.cell.Cell;
-/**
- * Class yang menunjukkan fasilitas
+/** Class yang menunjukkan fasilitas.
  * @author Prama Legawa Halqavi/13515132
  * @version 1.0, March 2017
  */
+
 public abstract class Facility extends Cell {
-  protected final String facility_name; //  nama fasilitas
-  protected final String facility_type; //  nama fasilitas
-  protected static int DEFSIZE = 10;
-  protected static String defname = "The Facility";
-  protected static int default_max_pengunjung = 10;
-  protected static String nil_string = "Nil";
-  /**ctor tanpa parameter, 
-   *nama dan tipe fasilitas diinisialisasi dengan defname
+  protected final String facilityName; //  nama fasilitas
+  protected final String facilityType; //  nama fasilitas
+  protected final int defSize = 10;
+  protected static final String defName = "The Facility";
+  protected final int defaultMaxPengunjung = 10;
+  protected final String nilString = "Nil";
+  /** ctor tanpa parameter.
+   * nama dan tipe fasilitas diinisialisasi dengan defName
    */
+  
   public Facility() {
     super("Facility");
-    this.facility_name = defname;
-    this.facility_type = defname;
+    this.facilityName = defName;
+    this.facilityType = defName;
   }
-  /** ctor dengan parameter 
+  /** ctor dengan parameter.
    * @param name nama fasilitas 
    * @param type tipe fasilitas 
    */
+
   public Facility(String name, String type) {
     super("Facility");
-    this.facility_name = name;
-    this.facility_type = type;
-    cell_type = "Facility";
+    this.facilityName = name;
+    this.facilityType = type;
+    cellType = "Facility";
   }
-  /**mengakses type fasilitas 
+  /**mengakses type fasilitas.
    */
-  public final String GetFacHabType() {
-    return facility_type;
+
+  public final String getFacHabType() {
+    return facilityType;
   }
-  /**mengakses nama fasilitas 
+  /**mengakses nama fasilitas.
    */
-  public final String GetFacilityName() {
-    return facility_name;
+
+  public final String getFacilityName() {
+    return facilityName;
   }
-  /**menggambarkan objek ke layar 
+  /**menggambarkan objek ke layar.
    */
-  public void Render(boolean oncage) {
-    Render();
+
+  public void render(boolean oncage) {
+    render();
   }
-  /**menggambarkan objek ke layar 
+  /**menggambarkan objek ke layar.
    */
-  public void Render() {
-    if (facility_type.equals("Park")) {
+
+  public void render() {
+    if (facilityType.equals("Park")) {
       System.out.print("P");
-    }
-    else if (facility_type.equals("Restaurant")) {
-      System.out.print("R");
-    }
-    else if (facility_type.equals("Road")) {
-      System.out.print(" ");
-    }
-    else if (facility_type.equals("Entrance")) {
-      System.out.print("E");
-    }
-    else if (facility_type.equals("Exit")) {
-      System.out.print("X");
-    }
+    } else 
+      if (facilityType.equals("Restaurant")) {
+        System.out.print("R");
+      } else 
+        if (facilityType.equals("Road")) {
+          System.out.print(" ");
+        } else 
+          if (facilityType.equals("Entrance")) {
+            System.out.print("E");
+          } else 
+            if (facilityType.equals("Exit")) {
+              System.out.print("X");
+            }
   }
 }

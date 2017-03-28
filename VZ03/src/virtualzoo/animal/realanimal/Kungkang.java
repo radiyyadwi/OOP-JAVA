@@ -3,6 +3,7 @@
 /** @brief Kelas objek Kungkang yang mewakili hewan Kungkang. 
   * objek akan di masukkan ke dalam zoo.
   */
+
 package virtualzoo.animal.realanimal;
 
 import virtualzoo.animal.Animal;
@@ -12,58 +13,71 @@ import virtualzoo.animal.animalfoodtype.AnimalFoodType;
  * @author Radiyya Dwisaputra/13515023
  * @version 1.0, March 2017
  */
+
 public class Kungkang extends Animal
-implements AnimalClass, AnimalFoodType {
-  private final double defaultweight = 10;
-  private final String food_type = "Omnivore";
+    implements AnimalClass, AnimalFoodType {
+  private final double defaultWeight = 10;
+  private final String foodType = "Omnivore";
   private final String kelas = "Mammal";
-  private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " + 
-  "yang ciri utama nya memiliki kelenjar susu";
-  /** Constructor
+  private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " 
+                                    + "yang ciri utama nya memiliki kelenjar susu";
+  /** Constructor.
    *  @see java.lang.reflect.Constructor
    */
+  
   public Kungkang() {
     super('k',true);
-    weight = defaultweight;
-    food_per_day = weight/4;
-    position.SetX(-1);
-    position.SetY(-1);
-    species_name = "Kungkang";
-    animal_type[0] = "Land";
+    weight = defaultWeight;
+    foodPerDay = weight / 4;
+    position.setX(-1);
+    position.setY(-1);
+    speciesName = "Kungkang";
+    animalType[0] = "Land";
   } 
-  /** Interaction Kungkang kepada pengunjung
-   * @see Animal#Interact()
+
+  /** Interaction Kungkang kepada pengunjung.
+   * @see Animal#interact()
    */
-   public void Interact() {
+  
+  @Override
+   public void interact() {
     System.out.println("aku gak gendut, cuman agak bulet dikit");
-    System.out.println("Mammal merupakan kelas hewan vertebrata" + 
-    "yang ciri utama nya memiliki kelenjar susu");
+    System.out.println("Mammal merupakan kelas hewan vertebrata" 
+                        + "yang ciri utama nya memiliki kelenjar susu");
   }
-   /** Memperoleh type makanan animal
-    * @see Animal#GetFoodType()
-    * @see AnimalFoodType#GetFoodType()
+  /** Memperoleh type makanan animal.
+    * @see Animal#getFoodType()
+    * @see AnimalFoodType#getFoodType()
     */
-  public String GetFoodType(){
-    return food_type;
+
+  @Override
+  public String getFoodType() {
+    return foodType;
   }
-  /** Memperoleh nama kelas dari animal
-   * @see AnimalClass#GetClassName()
+  /** Memperoleh nama kelas dari animal.
+   * @see AnimalClass#getClassName()
    */
-  public String GetClassName(){
+
+  @Override
+  public String getClassName() {
     return kelas;
   }
-  /** Memperoleh deskripsi animal 
-   * @see AnimalClass#GetDeskripsi()
+  /** Memperoleh deskripsi animal .
+   * @see AnimalClass#getDeskripsi()
    */
-  public String GetDeskripsi(){
+  
+  @Override
+  public String getDeskripsi() {
     return deskripsi;
   }
-  /** Menuliskan deskripsi hewan
+  /** Menuliskan deskripsi hewan.
    */
-  public void Deskripsi(){
-    System.out.print(super.GetSpeciesName());
+
+  @Override
+  public void deskripsi() {
+    System.out.print(super.getSpeciesName());
     System.out.print(" termasuk dalam kelas ");
-    System.out.println(GetClassName());
+    System.out.println(getClassName());
     System.out.println(deskripsi);
   }
 }
