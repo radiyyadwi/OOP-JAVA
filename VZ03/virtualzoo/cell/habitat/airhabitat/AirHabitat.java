@@ -8,9 +8,6 @@ import virtualzoo.cell.habitat.Habitat;
   * @version 1.0, March 2017
   */
 public class AirHabitat extends Habitat {
-  /**Constructor AirHabitat
-    *@see java.lang.reflect.Constructor
-	  */
   public AirHabitat() {
     super("Air");
   }
