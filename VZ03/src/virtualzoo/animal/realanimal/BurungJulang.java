@@ -32,6 +32,7 @@ implements AnimalClass, AnimalFoodType {
   /** InteractionBurungJulang kepada pengunjung
    * @see Animal#Interact()
    */
+  @Override
    public void Interact() {
     System.out.println( "Hai, aku burung berukuran besar, "
       + "dan aku memiliki paruh yang besar");
@@ -41,6 +42,7 @@ implements AnimalClass, AnimalFoodType {
     * @see Animal#GetFoodType()
     * @see AnimalFoodType#GetFoodType()
     */
+  @Override
   public String GetFoodType(){
     return food_type;
   }
@@ -48,6 +50,7 @@ implements AnimalClass, AnimalFoodType {
    * 
    * @see AnimalClass#GetClassName()
    */
+  @Override
   public String GetClassName(){
     return kelas;
   }
@@ -55,12 +58,14 @@ implements AnimalClass, AnimalFoodType {
    * 
    * @see AnimalClass#GetDeskripsi()
    */
+  @Override
   public String GetDeskripsi(){
     return deskripsi;
   }
   /** Menuliskan deskripsi hewan
    * 
    */
+  @Override
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

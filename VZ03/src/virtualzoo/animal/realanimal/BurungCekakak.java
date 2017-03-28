@@ -32,6 +32,7 @@ implements AnimalClass, AnimalFoodType {
   /** Interaction BurungCekakak kepada pengunjung
    * @see Animal#Interact()
    */
+  @Override
   public void Interact() {
     System.out.println("Hi I'm Kingfisher Bird! ");
     System.out.println("I can fly at 40km/h top speed ");
@@ -40,6 +41,7 @@ implements AnimalClass, AnimalFoodType {
    * @see Animal#GetFoodType()
    * @see AnimalFoodType#GetFoodType()
    */
+  @Override
   public String GetFoodType() {
     return food_type;
   }
@@ -47,17 +49,20 @@ implements AnimalClass, AnimalFoodType {
    * 
    * @see AnimalClass#GetClassName()
    */
+  @Override
   public String GetClassName() {
     return kelas;
   }
   /** Memperoleh deskripsi animal 
    * @see AnimalClass#GetDeskripsi()
    */
+  @Override
   public String GetDeskripsi() {
     return deskripsi;
   }
   /** Menuliskan deskripsi hewan
    */
+  @Override
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

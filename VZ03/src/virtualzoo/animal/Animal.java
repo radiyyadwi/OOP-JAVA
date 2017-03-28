@@ -34,7 +34,7 @@ public abstract class Animal implements Renderable {
   }
   /**Constructor
 	  * Mengisi atribut Animal sesuai parameter  
-	  * @param symbol_on_map simbol animal pada zoo
+	  * @param sym_on_map simbol animal pada zoo
 	  * @param is_tamed kondisi apakah animal liar atau jinak
 	  */
   public Animal(char sym_on_map, boolean is_tamed) {
@@ -71,7 +71,7 @@ public abstract class Animal implements Renderable {
   }
   /**
    * Mengubah posisi animal  
-   * @param Point p posisi yang diinginkan
+   * @param p posisi yang diinginkan
    */
   public final void SetPosition(Point p) {
     position.SetX(p.GetX());
@@ -100,7 +100,7 @@ public abstract class Animal implements Renderable {
       int i = 0;
       boolean found = false;
       while (i < n_enemy && !found) {
-        if (animal == enemy_list[i]) {
+        if (animal.equals(enemy_list[i])) {
           found = true;
         }
       i++;
@@ -163,6 +163,7 @@ public abstract class Animal implements Renderable {
   /** Menuliskan symbol yang mewakili hewan
    * @see Renderable#Render()
    */
+  @Override
   public final void Render() {
 	  System.out.print(symbol_on_map);
   }
