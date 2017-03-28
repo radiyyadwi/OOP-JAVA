@@ -47,7 +47,7 @@ public class CellTest {
         System.out.print("GetCellType");
         Cell instance = new Restaurant();
         String expResult = "Facility";
-        String result = instance.GetCellType();
+        String result = instance.getCellType();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -60,7 +60,7 @@ public class CellTest {
         System.out.print("GetFacHabType");
         Cell instance = new CellImpl();
         String expResult = "";
-        String result = instance.GetFacHabType();
+        String result = instance.getFacHabType();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -73,7 +73,7 @@ public class CellTest {
         System.out.print("SetCellType");
         String tipe = "";
         Cell instance = new CellImpl();
-        instance.SetCellType(tipe);
+        instance.setCellType(tipe);
         System.out.print("berhasil");
     }
 
@@ -85,7 +85,7 @@ public class CellTest {
         System.out.print("Render");
         boolean oncage = false;
         Cell instance = new CellImpl();
-        instance.Render(oncage);
+        instance.render(oncage);
         System.out.print("berhasil");
     }
 
@@ -96,7 +96,7 @@ public class CellTest {
     public void testRender_0args() {
         System.out.print("Render");
         Cell instance = new CellImpl();
-        instance.Render();
+        instance.render();
         System.out.print("berhasil");
     }
 
@@ -107,23 +107,23 @@ public class CellTest {
     public void testEnter() {
         System.out.print("Enter");
         Cell instance = new CellImpl();
-        instance.Enter();
+        instance.enter();
         System.out.print("berhasil");
     }
 
     public class CellImpl extends Cell {
 
-        public String GetFacHabType() {
+        public String getFacHabType() {
             return "";
         }
 
-        public void Render(boolean oncage) {
+        public void render(boolean oncage) {
         }
 
-        public void Render() {
+        public void render() {
         }
 
-        public void Enter() {
+        public void enter() {
         }
     }
     

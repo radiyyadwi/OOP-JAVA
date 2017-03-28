@@ -44,7 +44,7 @@ public class RoadTest {
     public void testEnter() {
         System.out.print("Enter");
         Road instance = new Road();
-        instance.Enter();
+        instance.enter();
         System.out.print("berhasil");
     }
     

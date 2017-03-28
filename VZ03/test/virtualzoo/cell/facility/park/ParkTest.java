@@ -48,7 +48,7 @@ public class ParkTest {
         System.out.print("GetJumlahPengunjung");
         Park instance = new Park();
         int expResult = 0;
-        int result = instance.GetJumlahPengunjung();
+        int result = instance.getJumlahPengunjung();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -61,7 +61,7 @@ public class ParkTest {
         System.out.print("IncreaseJumlahPengunjung");
         int x = 0;
         Park instance = new Park();
-        instance.IncreaseJumlahPengunjung(x);
+        instance.increaseJumlahPengunjung(x);
         System.out.print("berhasil");
     }
 
@@ -73,7 +73,7 @@ public class ParkTest {
         System.out.print("DecreaseJumlahPengunjung");
         int x = 0;
         Park instance = new Park();
-        instance.DecreaseJumlahPengunjung(x);
+        instance.decreaseJumlahPengunjung(x);
         System.out.print("berhasil");
     }
 
@@ -85,7 +85,7 @@ public class ParkTest {
         System.out.print("AddWahana");
         String whn = "";
         Park instance = new Park();
-        instance.AddWahana(whn);
+        instance.addWahana(whn);
         System.out.print("berhasil");
     }
 
@@ -97,7 +97,7 @@ public class ParkTest {
         System.out.print("DelWahana");
         String whn = "";
         Park instance = new Park();
-        instance.DelWahana(whn);
+        instance.delWahana(whn);
         System.out.print("berhasil");
     }
 

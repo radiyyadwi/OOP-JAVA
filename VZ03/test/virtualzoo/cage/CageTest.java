@@ -48,7 +48,7 @@ public class CageTest {
         System.out.print("GetCageSize");
         Cage instance = new Cage();
         int expResult = 0;
-        int result = instance.GetCageSize();
+        int result = instance.getCageSize();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -61,7 +61,7 @@ public class CageTest {
         System.out.print("GetID");
         Cage instance = new Cage();
         int expResult = 0;
-        int result = instance.GetID();
+        int result = instance.getId();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -74,7 +74,7 @@ public class CageTest {
         System.out.print("NumberOfAnimal");
         Cage instance = new Cage();
         int expResult = 0;
-        int result = instance.NumberOfAnimal();
+        int result = instance.numberOfAnimal();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -92,7 +92,7 @@ public class CageTest {
         String type = "Land";
         Cage instance = new Cage(id, area, ukuran, type);
         String expResult = "Land";
-        String result = instance.GetTypeCage();
+        String result = instance.getTypeCage();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -111,9 +111,9 @@ public class CageTest {
         String type = "Land";
         Cage instance = new Cage(id, area, ukuran, type);
         Point expResult = new Point(1,1);
-        Point result = instance.GetAreaElmt(i);
-        assertEquals(expResult.GetX(), result.GetX());
-        assertEquals(expResult.GetY(), result.GetY());
+        Point result = instance.getAreaElmt(i);
+        assertEquals(expResult.getX(), result.getX());
+        assertEquals(expResult.getY(), result.getY());
 
         System.out.print("berhasil");
     }
@@ -132,7 +132,7 @@ public class CageTest {
         String type = "Land";
         Cage instance = new Cage(id, area, ukuran, type);
         Animal expResult = null;
-        Animal result = instance.GetAnimal(i);
+        Animal result = instance.getAnimal(i);
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -151,7 +151,7 @@ public class CageTest {
         int ukuran = 1;
         String type = "Land";
         Cage instance = new Cage(id, area, ukuran, type);
-        instance.InputAnimal(hewan, area_id);
+        instance.inputAnimal(hewan, area_id);
         System.out.print("berhasil");
     }
 
@@ -169,7 +169,7 @@ public class CageTest {
         String type = "Land";
         Cage instance = new Cage(id, area, ukuran, type);
         boolean expResult = true;
-        boolean result = instance.Aman(hewan);
+        boolean result = instance.aman(hewan);
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -183,7 +183,7 @@ public class CageTest {
         Point p = null;
         Cage instance = new Cage();
         boolean expResult = false;
-        boolean result = instance.IsPassAble(p);
+        boolean result = instance.isPassAble(p);
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -195,7 +195,7 @@ public class CageTest {
     public void testMoveAnimal() {
         System.out.print("MoveAnimal");
         Cage instance = new Cage();
-        instance.MoveAnimal();
+        instance.moveAnimal();
         System.out.print("berhasil");
     }
 
@@ -206,7 +206,7 @@ public class CageTest {
     public void testRender() {
         System.out.print("Render");
         Cage instance = new Cage();
-        instance.Render();
+        instance.render();
         System.out.print("berhasil");
     }
     

@@ -44,7 +44,7 @@ public class IkanCupangTest {
     public void testInteract() {
         System.out.print("Interact");
         IkanCupang instance = new IkanCupang();
-        instance.Interact();
+        instance.interact();
         System.out.println(" berhasil");
     }
 
@@ -56,7 +56,7 @@ public class IkanCupangTest {
         System.out.print("GetFoodType");
         IkanCupang instance = new IkanCupang();
         String expResult = "Carnivore";
-        String result = instance.GetFoodType();
+        String result = instance.getFoodType();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -69,7 +69,7 @@ public class IkanCupangTest {
         System.out.print("GetClassName");
         IkanCupang instance = new IkanCupang();
         String expResult = "Actinopterygii";
-        String result = instance.GetClassName();
+        String result = instance.getClassName();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -82,25 +82,25 @@ public class IkanCupangTest {
         System.out.print("GetDeskripsi");
         IkanCupang instance = new IkanCupang();
         String expResult = "";
-        if(instance.GetClassName().equals("Aves")) {
+        if(instance.getClassName().equals("Aves")) {
             expResult = "Aves merupakan kelas kelompok hewan " + 
                         "vertebrata yang memiliki bulu dan sayap";
         } 
-        else if(instance.GetClassName().equals("Mammal")) {
+        else if(instance.getClassName().equals("Mammal")) {
             expResult = "Mammal merupakan kelas hewan vertebrata " +
             "yang ciri utama nya memiliki kelenjar susu";
         }
-        else if(instance.GetClassName().equals("Chondrichtyes")) {
+        else if(instance.getClassName().equals("Chondrichtyes")) {
             expResult = "Chondrichthyes merupakan ikan dengan tulang rawan";
         }
-        else if(instance.GetClassName().equals("Insect")) {
+        else if(instance.getClassName().equals("Insect")) {
             expResult = "Insect merupakan hewan avertebrata yang " + 
             "terdiri dari 3 bagian tubuh, dan bernafas dengan trakea";
         }
-        else if(instance.GetClassName().equals("Actinopterygii")) {
+        else if(instance.getClassName().equals("Actinopterygii")) {
             expResult = "Actinopterygii adalah ikan yang memiliki sirip kipas";
         }
-        String result = instance.GetDeskripsi();
+        String result = instance.getDeskripsi();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -112,7 +112,7 @@ public class IkanCupangTest {
     public void testDeskripsi() {
         System.out.print("Deskripsi");
         IkanCupang instance = new IkanCupang();
-        instance.Deskripsi();
+        instance.deskripsi();
         System.out.println(" berhasil");
     }
     
