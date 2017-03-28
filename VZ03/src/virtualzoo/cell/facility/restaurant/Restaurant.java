@@ -1,96 +1,106 @@
+// Nama File : Road.java
+// N0 : Prama Halqavi (13515132)
+
 package virtualzoo.cell.facility.restaurant;
+
 import java.util.Scanner;
 import virtualzoo.cell.facility.Facility;
-/**
- * Class yang menunjukkan restaurant
+/** Class yang menunjukkan restaurant.
  * @author Prama Legawa Halqavi/13515132
  * @version 1.0, March 2017
  */
+
 public class Restaurant extends Facility {
   private String[] menu; // * @brief array of menu
-  private final int max_pengunjung; // * @brief nama restoran
-  private int jumlah_pengunjung; // * @brief jumlah pengunjung
-  private int n_menu;
+  private final int maxPengunjung; // * @brief nama restoran
+  private int jumlahPengunjung; // * @brief jumlah pengunjung
+  private int jumlahMenu;
   /**ctor tanpa parameter. 
-   * nama fasilitas diinisialisasi dengan defname 
+   * nama fasilitas diinisialisasi dengan defName 
    */
+  
   public Restaurant() {
-    super(defname, "Restaurant");
-    this.max_pengunjung = default_max_pengunjung;
-    jumlah_pengunjung = 0;
-    menu = new String [DEFSIZE];
-    for (int i = 0; i < DEFSIZE; i++) {
-      menu[i] = nil_string;
+    super(defName, "Restaurant");
+    this.maxPengunjung = defaultMaxPengunjung;
+    jumlahPengunjung = 0;
+    menu = new String [defSize];
+    for (int i = 0; i < defSize; i++) {
+      menu[i] = nilString;
     }
-    n_menu = 0;
+    jumlahMenu = 0;
   }
-  /** ctor dengan parameter nama restoran 
+  /** ctor dengan parameter nama restoran.
     * @param nama restoran
     * @param maxpeng maximal jumlah pengunjung  
     */
-  public Restaurant(String nama, int maxpeng)
-  {
+  
+  public Restaurant(String nama, int maxpeng) {
     super(nama, "Restaurant");
-    this.max_pengunjung = maxpeng;
-    jumlah_pengunjung = 0;
-    menu = new String [DEFSIZE];
-    for (int i = 0; i < DEFSIZE; i++) {
-      menu[i] = nil_string;
+    this.maxPengunjung = maxpeng;
+    jumlahPengunjung = 0;
+    menu = new String [defSize];
+    for (int i = 0; i < defSize; i++) {
+      menu[i] = nilString;
     }
-    n_menu = 0;
+    jumlahMenu = 0;
   }
-  /** menambahkan jumlah pengunjung yang ada di restoran
-     * @param x menambahkan pengunjung sejumlah x 
-     */
-  public void IncreaseJumlahPengunjung(int x) {
-    jumlah_pengunjung += x;
+  /** menambahkan jumlah pengunjung yang ada di restoran.
+    * @param x menambahkan pengunjung sejumlah x 
+    */
+  
+  public void increaseJumlahPengunjung(int x) {
+    jumlahPengunjung += x;
   }
-  /**mengurangi jumlah pengunjung yang ada di restoran
+  /**mengurangi jumlah pengunjung yang ada di restoran.
     * @param x mengurangi pengunjung sejumlah x 
     */
-  public void DecreaseJumlahPengunjung(int x) {
-    jumlah_pengunjung -= x;
+  
+  public void decreaseJumlahPengunjung(int x) {
+    jumlahPengunjung -= x;
   }
-  /**menambahkan menu 
-    * @param menu nama menu 
+  /**menambahkan men.
+    * @param pilihanMenu nama menu 
     */
-  public void AddMenu(String _menu) {
-    menu[n_menu] = _menu;
-    n_menu++;
+  
+  public void addMenu(String pilihanMenu) {
+    menu[jumlahMenu] = pilihanMenu;
+    jumlahMenu++;
   }
-  /**menghapus menu
-    * @param menu nama menu 
+  /**menghapus menu.
+    * @param pilihanMenu nama menu 
     */
-  public void DelMenu(String _menu) {
+  
+  public void delMenu(String pilihanMenu) {
     int i = 0;
     boolean found = false;
-    while (i < DEFSIZE && !found) {
-      if (menu[i] == _menu) {
+    while (i < defSize && !found) {
+      if (menu[i] == pilihanMenu) {
         found = true;
-      }
-      else {
+      } else {
         i++;
       }
     }
     if (found) {
-      for (i = 0; i < DEFSIZE-1; i++) {
+      for (i = 0; i < defSize - 1; i++) {
         menu[i] = menu[i + 1];
       }
-      n_menu--;
+      jumlahMenu--;
     }
   }
-  /**mengakses jumlah pengunjung 
+  /**mengakses jumlah pengunjung. 
     */
-  public int GetJumlahPengunjung() {
-    return jumlah_pengunjung;
+  
+  public int getJumlahPengunjung() {
+    return jumlahPengunjung;
   }
-  /**memasuki taman 
+  /**memasuki taman.
     */
-  public void Enter() {
+  
+  public void enter() {
     System.out.print("\n");
     System.out.print("Pilihan Menu: ");
     System.out.print("\n");
-    for (int i = 0; i < n_menu; i++) {
+    for (int i = 0; i < jumlahMenu; i++) {
       System.out.print(i + 1);
       System.out.print(".  ");
       System.out.print(menu[i]);
@@ -100,7 +110,7 @@ public class Restaurant extends Facility {
     System.out.print("Masukkan pilihan anda: ");
     Scanner s = new Scanner(System.in);
     x = s.nextInt();
-    while (x < 1 || x > n_menu) {
+    while (x < 1 || x > jumlahMenu) {
       System.out.print("Inputan salah, ulangi: ");
       x = s.nextInt();
     }
@@ -108,8 +118,5 @@ public class Restaurant extends Facility {
     System.out.print(menu[x - 1]);
     System.out.print(", rasanya lezat");
     System.out.print("\n");
-    s.close();
   }
 }
-
-
