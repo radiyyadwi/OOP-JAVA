@@ -1,96 +1,106 @@
+// Nama File : Road.java
+// N0 : Prama Halqavi (13515132)
+
 package virtualzoo.cell.facility.park;
+
 import java.util.Scanner;
 import virtualzoo.cell.facility.Facility;
-/**
- * Class yang menunjukkan park
+/**Class yang menunjukkan park.
  * @author Prama Legawa Halqavi/13515132
  * @version 1.0, March 2017
  */
+
 public class Park extends Facility {
-  private final int max_pengunjung; // * @brief jumlah maksimal pengunjung
-  private String[] wahana; /* * @brief wahana yang ada di park, 
-	                           berupa array of std::string */
-  private int jumlah_pengunjung; // * @brief jumlah pengunjung
-  private int n_wahana;
-   /**ctor tanpa parameter. 
-    * nama fasilitas diinisialisasi dengan defname 
+  private final int maxPengunjung; // * @brief jumlah maksimal pengunjung
+  private String[] wahana; /* * @brief wahana yang ada di park, berupa array of std::string */
+  private int jumlahPengunjung; // * @brief jumlah pengunjung
+  private int jumlahWahana;
+  /**ctor tanpa parameter. 
+    * nama fasilitas diinisialisasi dengan defName 
     */
+
   public Park() {
-    super(defname, "Park");
-    this.max_pengunjung = default_max_pengunjung;
-    jumlah_pengunjung = 0;
-    wahana = new String [DEFSIZE];
-    for (int i = 0; i < DEFSIZE; i++) {
-      wahana[i] = nil_string;
+    super(defName, "Park");
+    this.maxPengunjung = defaultMaxPengunjung;
+    jumlahPengunjung = 0;
+    wahana = new String [defSize];
+    for (int i = 0; i < defSize; i++) {
+      wahana[i] = nilString;
     }
-    n_wahana = 0;
+    jumlahWahana = 0;
   }
-  /**ctor dengan parameter
+  /**ctor dengan parameter.
    * @param nama taman
    * @param maxpeng maximal jumlah pengunjung  
    */
+  
   public Park(String nama, int maxpeng) {
     super(nama, "Park");
-    this.max_pengunjung = maxpeng;
-    jumlah_pengunjung = 0;
-    wahana = new String [DEFSIZE];
-    for (int i = 0; i < DEFSIZE; i++) {
-      wahana[i] = nil_string;
+    this.maxPengunjung = maxpeng;
+    jumlahPengunjung = 0;
+    wahana = new String [defSize];
+    for (int i = 0; i < defSize; i++) {
+      wahana[i] = nilString;
     }
-    n_wahana = 0;
+    jumlahWahana = 0;
   }
-   /**mengakses jumlah pengunjung 
+  /**mengakses jumlah pengunjung.
+   */
+  
+  public int getJumlahPengunjung() {
+    return jumlahPengunjung;
+  }
+  /** menambahkan jumlah pengunjung yang ada di taman.
+    * @param x menambahkan pengunjung sejumlah x 
     */
-  public int GetJumlahPengunjung() {
-    return jumlah_pengunjung;
+  
+  public void increaseJumlahPengunjung(int x) {
+    jumlahPengunjung += x;
   }
-   /** menambahkan jumlah pengunjung yang ada di taman 
-     * @param x menambahkan pengunjung sejumlah x 
-     */
-  public void IncreaseJumlahPengunjung(int x) {
-    jumlah_pengunjung += x;
+  /**mengurangi jumlah pengunjung yang ada di taman.
+   * @param x mengurangi pengunjung sejumlah x 
+   */
+
+  public void decreaseJumlahPengunjung(int x) {
+    jumlahPengunjung -= x;
   }
-    /**mengurangi jumlah pengunjung yang ada di taman 
-     * @param x mengurangi pengunjung sejumlah x 
-     */
-  public void DecreaseJumlahPengunjung(int x) {
-    jumlah_pengunjung -= x;
-  }
-  /** menambahkan nama wahana ke array wahana 
-    * @param nama wahana 
+  /** menambahkan nama wahana ke array wahana.
+    * @param whn wahana yang ditambah
     */
-  public void AddWahana(String whn) {
-    wahana[n_wahana] = whn;
-    n_wahana++;
+
+  public void addWahana(String whn) {
+    wahana[jumlahWahana] = whn;
+    jumlahWahana++;
   }
-  /** menghapus wahana yang ada dalam array wahana
-    * @param nama wahana 
+  /** menghapus wahana yang ada dalam array wahana.
+    * @param whn wahana yang di tambah
     */
-  public void DelWahana(String whn) {
+
+  public void delWahana(String whn) {
     int i = 0;
     boolean found = false;
-    while (i < DEFSIZE && !found) {
+    while (i < defSize && !found) {
       if (wahana[i] == whn) {
         found = true;
-      }
-      else {
+      } else {
         i++;
       }
     }
     if (found) {
-      for (i = 0; i < DEFSIZE -1; i++) {
+      for (i = 0; i < defSize - 1; i++) {
         wahana[i] = wahana[i + 1];
       } 
-      n_wahana--;
+      jumlahWahana--;
     }
   }
-  /**memasuki taman 
+  /**memasuki taman.
     */
-  public void Enter() {
+
+  public void enter() {
     System.out.print("\n");
     System.out.print("Di Park ini terdapat wahana: ");
     System.out.print("\n");
-    for (int i = 0; i < n_wahana; i++) {
+    for (int i = 0; i < jumlahWahana; i++) {
       System.out.print(i + 1);
       System.out.print(".  ");
       System.out.print(wahana[i]);
@@ -100,7 +110,7 @@ public class Park extends Facility {
     System.out.print("Masukkan pilihan anda: ");
     Scanner s = new Scanner(System.in);
     x = s.nextInt();
-    while (x < 1 || x > n_wahana) {
+    while (x < 1 || x > jumlahWahana) {
       System.out.print("Inputan salah, ulangi: ");
       x = s.nextInt();
     }
@@ -108,6 +118,5 @@ public class Park extends Facility {
     System.out.print(wahana[x - 1]);
     System.out.print(", sangat seru hingga anda ingin naik lagi!");
     System.out.print("\n");
-    s.close();
   }
 }
