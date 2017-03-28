@@ -45,7 +45,7 @@ public class DriverZooTest {
     public void testDisplayVirtualZoo_0args() {
         System.out.print("DisplayVirtualZoo");
         DriverZoo instance = new DriverZoo();
-        instance.DisplayVirtualZoo();
+        instance.displayVirtualZoo();
         System.out.print("berhasil");
     }
 
@@ -58,7 +58,7 @@ public class DriverZooTest {
         Point upleft = new Point(1,1);
         Point downright = new Point(2,2);
         DriverZoo instance = new DriverZoo();
-        instance.DisplayVirtualZoo(upleft, downright);
+        instance.displayVirtualZoo(upleft, downright);
         System.out.print("berhasil");
     }
 
@@ -69,7 +69,7 @@ public class DriverZooTest {
     public void testHitungMakanan() {
         System.out.print("HitungMakanan");
         DriverZoo instance = new DriverZoo();
-        instance.HitungMakanan();
+        instance.hitungMakanan();
         System.out.print("berhasil");
     }
 
@@ -80,7 +80,7 @@ public class DriverZooTest {
     public void testMoveAnimal() {
         System.out.print("MoveAnimal");
         DriverZoo instance = new DriverZoo();
-        instance.MoveAnimal();
+        instance.moveAnimal();
         System.out.print("berhasil");
     }
 
@@ -91,7 +91,7 @@ public class DriverZooTest {
     public void testPrintTitle() {
         System.out.print("PrintTitle");
         DriverZoo instance = new DriverZoo();
-        instance.PrintTitle();
+        instance.printTitle();
         System.out.print("berhasil");
     }
 
@@ -111,7 +111,7 @@ public class DriverZooTest {
     public void testPrintAllAnimal() {
         System.out.print("PrintAllAnimal");
         DriverZoo instance = new DriverZoo();
-        instance.PrintAllAnimal();
+        instance.printAllAnimal();
         System.out.print("berhasil");
     }
     

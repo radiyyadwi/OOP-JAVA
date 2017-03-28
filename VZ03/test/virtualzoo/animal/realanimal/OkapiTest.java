@@ -44,7 +44,7 @@ public class OkapiTest {
     public void testInteract() {
         System.out.print("Interact");
         Okapi instance = new Okapi();
-        instance.Interact();
+        instance.interact();
         System.out.println(" berhasil");
     }
 
@@ -56,7 +56,7 @@ public class OkapiTest {
         System.out.print("GetFoodType");
         Okapi instance = new Okapi();
         String expResult = "Herbivore";
-        String result = instance.GetFoodType();
+        String result = instance.getFoodType();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -69,7 +69,7 @@ public class OkapiTest {
         System.out.print("GetClassName");
         Okapi instance = new Okapi();
         String expResult = "Mammal";
-        String result = instance.GetClassName();
+        String result = instance.getClassName();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -82,25 +82,25 @@ public class OkapiTest {
         System.out.print("GetDeskripsi");
         Okapi instance = new Okapi();
         String expResult = "";
-        if(instance.GetClassName().equals("Aves")) {
+        if(instance.getClassName().equals("Aves")) {
             expResult = "Aves merupakan kelas kelompok hewan " + 
                         "vertebrata yang memiliki bulu dan sayap";
         } 
-        else if(instance.GetClassName().equals("Mammal")) {
+        else if(instance.getClassName().equals("Mammal")) {
             expResult = "Mammal merupakan kelas hewan vertebrata " +
             "yang ciri utama nya memiliki kelenjar susu";
         }
-        else if(instance.GetClassName().equals("Chondrichtyes")) {
+        else if(instance.getClassName().equals("Chondrichtyes")) {
             expResult = "Chondrichthyes merupakan ikan dengan tulang rawan";
         }
-        else if(instance.GetClassName().equals("Insect")) {
+        else if(instance.getClassName().equals("Insect")) {
             expResult = "Insect merupakan hewan avertebrata yang " + 
             "terdiri dari 3 bagian tubuh, dan bernafas dengan trakea";
         }
-        else if(instance.GetClassName().equals("Actinopterygii")) {
+        else if(instance.getClassName().equals("Actinopterygii")) {
             expResult = "Actinopterygii adalah ikan yang memiliki sirip kipas";
         }
-        String result = instance.GetDeskripsi();
+        String result = instance.getDeskripsi();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -112,7 +112,7 @@ public class OkapiTest {
     public void testDeskripsi() {
         System.out.print("Deskripsi");
         Okapi instance = new Okapi();
-        instance.Deskripsi();
+        instance.deskripsi();
         System.out.println(" berhasil");
     }
     

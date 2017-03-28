@@ -48,9 +48,9 @@ public class AnimalTest {
         System.out.print("GetPosition");
         Platypus instance = new Platypus();
         Point expResult = new Point(-1,-1);
-        Point result = instance.GetPosition();
-        assertEquals(expResult.GetX(), result.GetX());
-        assertEquals(expResult.GetY(), result.GetY());
+        Point result = instance.getPosition();
+        assertEquals(expResult.getX(), result.getX());
+        assertEquals(expResult.getY(), result.getY());
         System.out.println(" berhasil");
 
     }
@@ -63,7 +63,7 @@ public class AnimalTest {
         System.out.print("GetSpeciesName");
         Platypus instance = new Platypus();
         String expResult = "Platypus";
-        String result = instance.GetSpeciesName();
+        String result = instance.getSpeciesName();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
 
@@ -77,7 +77,7 @@ public class AnimalTest {
         System.out.print("GetFoodNum");
         Animal instance = new AnimalImpl();
         double expResult = 0.0;
-        double result = instance.GetFoodNum();
+        double result = instance.getFoodNum();
         assertEquals(expResult, result, 0.0);
         System.out.println(" berhasil");        
     }
@@ -90,7 +90,7 @@ public class AnimalTest {
         System.out.print("SetPosition");
         Point p = new Point(-1,-1);
         Animal instance = new AnimalImpl();
-        instance.SetPosition(p);
+        instance.setPosition(p);
         System.out.println(" berhasil");        
     }
 
@@ -101,7 +101,7 @@ public class AnimalTest {
     public void testInteract() {
         System.out.print("Interact");
         Animal instance = new AnimalImpl();
-        instance.Interact();
+        instance.interact();
         System.out.println(" berhasil");
     }
 
@@ -112,7 +112,7 @@ public class AnimalTest {
     public void testDeskripsi() {
         System.out.print("Deskripsi");
         Animal instance = new AnimalImpl();
-        instance.Deskripsi();
+        instance.deskripsi();
         System.out.println(" berhasil");
     }
 
@@ -124,7 +124,7 @@ public class AnimalTest {
         System.out.print("IsTamed");
         Animal instance = new AnimalImpl();
         boolean expResult = true;
-        boolean result = instance.IsTamed();
+        boolean result = instance.isTamed();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -138,7 +138,7 @@ public class AnimalTest {
         String animal = "";
         Animal instance = new AnimalImpl();
         boolean expResult = false;
-        boolean result = instance.IsEnemy(animal);
+        boolean result = instance.isEnemy(animal);
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -151,7 +151,7 @@ public class AnimalTest {
         System.out.print("AddEnemy");
         String animal_name = "";
         Animal instance = new AnimalImpl();
-        instance.AddEnemy(animal_name);
+        instance.addEnemy(animal_name);
         System.out.println(" berhasil");
     }
 
@@ -163,7 +163,7 @@ public class AnimalTest {
         System.out.print("AddAnimalType");
         String type = "";
         Animal instance = new AnimalImpl();
-        instance.AddAnimalType(type);
+        instance.addAnimalType(type);
         System.out.println(" berhasil");
     }
 
@@ -176,7 +176,7 @@ public class AnimalTest {
         String type = "Flying";
         Animal instance = new AnimalImpl();
         boolean expResult = false;
-        boolean result = instance.IsTypeThere(type);
+        boolean result = instance.isTypeThere(type);
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -189,7 +189,7 @@ public class AnimalTest {
         System.out.print("GetFoodType");
         Animal instance = new AnimalImpl();
         String expResult = "";
-        String result = instance.GetFoodType();
+        String result = instance.getFoodType();
         assertEquals(expResult, result);
         System.out.println(" berhasil");
     }
@@ -201,19 +201,19 @@ public class AnimalTest {
     public void testRender() {
         System.out.print("Render");
         Animal instance = new AnimalImpl();
-        instance.Render();
+        instance.render();
         System.out.println(" berhasil");
     }
 
     public class AnimalImpl extends Animal {
 
-        public void Interact() {
+        public void interact() {
         }
 
-        public void Deskripsi() {
+        public void deskripsi() {
         }
 
-        public String GetFoodType() {
+        public String getFoodType() {
             return "";
         }
     }
