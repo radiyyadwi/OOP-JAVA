@@ -42,33 +42,39 @@ public class Cage implements Renderable {
     list_of_animal = new Animal[animal_size];
   }
   /**  Menghasilkan nilai dari ukuran Cage
+   * @return ukuran area dari Cage
    */
   public int GetCageSize() {
     return size_area;
   }
   /** Menghasilkan ID Cage
+   * @return ID dari Cage
   */
   public int GetID() {
     return id;
   }
   /** Menghasilkan jumlah hewan pada Cage
+   * @return jumlah hewan yang ada di Cage
    */
   public int NumberOfAnimal() {
     return jumlah_hewan;
   }
   /** Menghasilkan type Cage
+   * @return type habitat dari Cage
    */
   public String GetTypeCage() {
     return cage_type;
   }
   /** Menghasilkan Point ke i di dalam Cage
    * @param i merupakan indeks Point yang akan dicari
+   * @return elemen ke i dari area dalam Cage
    */
   public Point GetAreaElmt(int i) {
     return area[i];
   }
   /** Menghasilkan Animal ke i pada list_of_animal
    * @param i merupakan indeks list_of_animal yang akan dicari
+   * @return Animal indeks ke i dalam Cage
    */
   public Animal GetAnimal(int i ) {
     return list_of_animal[i];
@@ -89,6 +95,7 @@ public class Cage implements Renderable {
   }
   /** Mengecek hewan apakah aman bila dimasukkan ke Cage
    * @param hewan menunjukkan hewan yang akan dimasukkan
+   * @return true jika hewan aman untuk masuk dalam cage, selainnya false 
    */
   public boolean Aman(Animal hewan) {
     boolean safe = true;
@@ -116,6 +123,7 @@ public class Cage implements Renderable {
   }
   /** Mengecek apakah dapat melewati point
    * @param p merupakan Point yang akan dicek
+   * @return apakah Point p bisa dilewati
    */
   public boolean IsPassAble(Point p) {
     boolean bener = false;
@@ -135,7 +143,6 @@ public class Cage implements Renderable {
     return bener;    
   }
   /** Menggerakkan Animal
-   * @param p merupakan Point yang akan dicek
    */
   public void MoveAnimal() {
     Random rand = new Random();
@@ -168,6 +175,7 @@ public class Cage implements Renderable {
   /** Mencetak ID dari Cage
    * @see Renderable#Render()
    */
+  @Override
   public void Render() {
     System.out.print(id);
   }

@@ -8,12 +8,13 @@ package virtualzoo.animal.animalclass;
  * @version 1.0, March 2017
  */
 public interface AnimalClass {
-	/** Menghasilkan deskripsi tentang animal
-   * 
-   */
+/** Menghasilkan deskripsi tentang animal
+ * 
+ * @return deskripsi hewan 
+ */
   public String GetDeskripsi();
   /** Menghasilkan nama kelas animal
-    * 
+    * @return kelas animal
     */
   public String GetClassName();
 }

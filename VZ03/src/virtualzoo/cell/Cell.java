@@ -17,7 +17,7 @@ public abstract class Cell implements Renderable {
   public Cell() {
   }
   /** Constructor dengan parameter
-   *  @param type menunjukan type cell
+   *  @param tipe menunjukan type cell
    */
   public Cell(String tipe) {
     cell_type = tipe;
@@ -45,6 +45,7 @@ public abstract class Cell implements Renderable {
   public abstract void Render(boolean oncage);
   /** Mencetak Cell
    */
+  @Override
   public abstract void Render();
   /** Menjadikan tempat masuk Virtual Zoo
    */

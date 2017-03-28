@@ -77,7 +77,7 @@ public class DriverZoo {
     }
     String[] cage_type = new String [max_cage];
     for (int i = 0; i < max_cage; i++) {
-      cage_type[i] = new String(".");
+      cage_type[i] = ".";
     }
     int[][] animal_index = new int [height+1][width+1];
     for (int i = 0; i < height; i++) {
@@ -174,9 +174,9 @@ public class DriverZoo {
                 break;
               }
             }
-            if ((temp == 'A' && cage_type[num] == "Air") || 
-              (temp == 'L' && cage_type[num] == "Land") || 
-              (temp == 'W' && cage_type[num] == "Water")) {
+            if ((temp == 'A' && cage_type[num].equals("Air")) || 
+              (temp == 'L' && cage_type[num].equals("Land")) || 
+              (temp == 'W' && cage_type[num].equals("Water"))) {
               area_list[num][ukuran_cage[num]].SetX(j);
               area_list[num][ukuran_cage[num]].SetY(i);
               ukuran_cage[num] ++;
@@ -389,13 +389,13 @@ public class DriverZoo {
         for (int j = 0; j < cage_list[i].NumberOfAnimal(); j++) {
           String type = cage_list[i].GetAnimal(j).GetFoodType();
           double foodnum = cage_list[i].GetAnimal(j).GetFoodNum();
-          if (type == "Omnivore") {
+          if (type.equals("Omnivore")) {
             omni += foodnum;
           }
-          else if (type == "Carnivore"){
+          else if (type.equals("Carnivore")){
             daging += foodnum;
           }
-          else if (type == "Herbivore") {
+          else if (type.equals("Herbivore")) {
             sayur += foodnum;
           }
           else {
@@ -443,8 +443,8 @@ public class DriverZoo {
     //Mendata Entrance yang ada
     for (int i = 0;i < height; i++) {
       for (int j = 0;j < width; j++) {
-        if (virtual_zoo.GetZooElmt(i,j).GetCellType() == "Facility") {
-          if (virtual_zoo.GetZooElmt(i,j).GetFacHabType() == "Entrance") {
+        if (virtual_zoo.GetZooElmt(i,j).GetCellType().equals("Facility")) {
+          if (virtual_zoo.GetZooElmt(i,j).GetFacHabType().equals("Entrance")) {
           entrance_list[n_entrance] = new Point(j,i);
           n_entrance++;
           }
@@ -513,7 +513,7 @@ public class DriverZoo {
         if ((dest.GetY() <0 || dest.GetX() <0 || dest.GetY()>=height || 
            dest.GetX() >= width) ? false : true)
         if (virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetCellType() 
-          == "Facility") {
+          .equals("Facility")) {
           if (virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetFacHabType() 
               == "Road" || 
               virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetFacHabType() 
@@ -570,16 +570,15 @@ public class DriverZoo {
             //donothinng
           }
           else
-          if (virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetCellType() 
-              == "Facility") {  
+          if (virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetCellType()
+                  .equals("Facility")) {  
             String type = virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetFacHabType();
-            if (type != "Road" && type != "Entrance" && type != "Exit") {
+            if (!type.equals("Road") && !type.equals("Entrance") && !type.equals("Exit")) {
               //Cari apakah facility dengan jenis tersebut sudah ada
               int k = 0;
               boolean exist = false;
               while (k < nearfac && !exist) {
-                if (nearby_facility[k].GetFacHabType() == 
-                  virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetFacHabType()) {
+                if (nearby_facility[k].GetFacHabType().equals(virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetFacHabType())) {
                   exist = true;
                 }
                 k++;
@@ -591,7 +590,7 @@ public class DriverZoo {
             }
           }
           else
-          if (virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetCellType() == "Habitat")
+          if (virtual_zoo.GetZooElmt(dest.GetY(),dest.GetX()).GetCellType().equals("Habitat"))
           {
             //Cari apakah ada kandang di habitat  itu
             boolean found = false;
@@ -621,7 +620,7 @@ public class DriverZoo {
                   int k = 0;
                   boolean exist = false;
                   while (k < near_animal && !exist) {
-                    if (nearby_animal[k].GetSpeciesName() == animalspeci) {
+                    if (nearby_animal[k].GetSpeciesName().equals(animalspeci)) {
                       exist = true;
                     }
                     k++;

@@ -32,6 +32,7 @@ implements AnimalClass, AnimalFoodType {
   /** Interaction ElangBotak kepada pengunjung
    * @see Animal#Interact()
    */
+  @Override
    public void Interact() {
     System.out.println("aku hewan pemangsa yang kuat bahkan karena " + 
       "kekuatankku aku dijadikan simbol negara Amerika Serikat ");
@@ -41,6 +42,7 @@ implements AnimalClass, AnimalFoodType {
     * @see Animal#GetFoodType()
     * @see AnimalFoodType#GetFoodType()
     */
+  @Override
   public String GetFoodType(){
     return food_type;
   }
@@ -48,6 +50,7 @@ implements AnimalClass, AnimalFoodType {
    * 
    * @see AnimalClass#GetClassName()
    */
+  @Override
   public String GetClassName(){
     return kelas;
   }
@@ -55,6 +58,7 @@ implements AnimalClass, AnimalFoodType {
    * 
    * @see AnimalClass#GetDeskripsi()
    */
+  @Override
   public String GetDeskripsi(){
     return deskripsi;
   }
@@ -62,6 +66,7 @@ implements AnimalClass, AnimalFoodType {
    * 
    * @see AnimalClass#GetDeskripsi()
    */
+  @Override
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

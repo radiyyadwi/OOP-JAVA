@@ -40,23 +40,27 @@ implements AnimalClass, AnimalFoodType {
     * @see Animal#GetFoodType()
     * @see AnimalFoodType#GetFoodType()
     */
+  @Override
   public String GetFoodType(){
     return food_type;
   }
   /** Memperoleh nama kelas dari animal
    * @see AnimalClass#GetClassName()
    */
+  @Override
   public String GetClassName(){
     return kelas;
   }
   /** Memperoleh deskripsi animal
    * @see AnimalClass#GetDeskripsi()
    */
+  @Override
   public String GetDeskripsi(){
     return deskripsi;
   }
   /** Menuliskan deskripsi hewan
    */
+  @Override
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

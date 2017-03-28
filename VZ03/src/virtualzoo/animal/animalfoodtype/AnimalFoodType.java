@@ -6,8 +6,8 @@ package virtualzoo.animal.animalfoodtype;
  * @version 1.0, March 2017
  */
 public interface AnimalFoodType {
-	/** Menghasilkan type makanan hewan 
-   * 
+/** Menghasilkan type makanan hewan 
+   * @return type makanan 
    */
   public String GetFoodType();
 }
