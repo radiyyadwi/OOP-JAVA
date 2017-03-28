@@ -8,7 +8,10 @@ package virtualzoo.animal.realanimal;
 import virtualzoo.animal.Animal;
 import virtualzoo.animal.animalclass.AnimalClass;
 import virtualzoo.animal.animalfoodtype.AnimalFoodType;
-
+/** Class yang menunjukkan hewan real SemutPanda
+ * @author Radiyya Dwisaputra/13515023
+ * @version 1.0, March 2017
+ */
 public class SemutPanda extends Animal
 implements AnimalClass, AnimalFoodType
 {
@@ -17,9 +20,9 @@ implements AnimalClass, AnimalFoodType
   private final String kelas = "Insect";
   private final String deskripsi = "Insect merupakan hewan avertebrata yang " + 
   "terdiri dari 3 bagian tubuh, dan bernafas dengan trakea";
-  /** @brief Ctor objek SemutPanda.
-    * Terbentuk objek SemutPanda.
-    */ 
+  /** Constructor
+   *  @see java.lang.reflect.Constructor
+   */
   public SemutPanda() {
     super('s',true);
     weight = defaultweight;
@@ -29,34 +32,33 @@ implements AnimalClass, AnimalFoodType
     species_name =  "SemutPanda";
     animal_type[0] = "Land";
   } 
-  /** @brief Method Interact objek SemutPanda.
-    * Menampilkan keluaran saat adanya interaksi.
-    * Interaksi dilakukan dengan pengunjung.
-    */
+  /** Interaction SemutPanda kepada pengunjung
+   * @see Animal#Interact()
+   */
    public void Interact() {
     System.out.println("Aku bukan semut, tetapi lebah!");
   }
-  /** @brief Method IsEnemy objek SemutPanda.
-    * Mengecek hewan lain apakah musuh SemutPanda atau tidak.
-    * Musuh ialah yang tidak dapat diletakkan 1 kandang.
-    * @param hewan yang akan di cek.
-    */
-
-  /** @brief Method GedFoodType objek SemutPanda.
-    * Memperoleh tipe makanan yang dimakan oleh hewan.
+   /** Memperoleh type makanan animal
+    * @see Animal#GetFoodType()
+    * @see AnimalFoodType#GetFoodType()
     */
   public String GetFoodType(){
     return food_type;
   }
+  /** Memperoleh nama kelas dari animal
+   * @see AnimalClass#GetClassName()
+   */
   public String GetClassName(){
     return kelas;
   }
+  /** Memperoleh deskripsi animal 
+   * @see AnimalClass#GetDeskripsi()
+   */
   public String GetDeskripsi(){
     return deskripsi;
   }
-  /** @brief Method Deskripsi objek SemutPanda.
-      * Menghasilkan deskripsi tentang hewan.
-      */
+  /** Menuliskan deskripsi hewan
+   */
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

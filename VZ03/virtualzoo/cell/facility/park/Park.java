@@ -1,15 +1,19 @@
 package virtualzoo.cell.facility.park;
 import java.util.Scanner;
 import virtualzoo.cell.facility.Facility;
-
+/**
+ * Class yang menunjukkan park
+ * @author Prama Legawa Halqavi/13515132
+ * @version 1.0, March 2017
+ */
 public class Park extends Facility {
   private final int max_pengunjung; // * @brief jumlah maksimal pengunjung
   private String[] wahana; /* * @brief wahana yang ada di park, 
 	                           berupa array of std::string */
   private int jumlah_pengunjung; // * @brief jumlah pengunjung
   private int n_wahana;
-   /* * @brief ctor tanpa parameter. 
-       * nama fasilitas diinisialisasi dengan defname 
+   /**ctor tanpa parameter. 
+    * nama fasilitas diinisialisasi dengan defname 
     */
   public Park() {
     super(defname, "Park");
@@ -21,9 +25,10 @@ public class Park extends Facility {
     }
     n_wahana = 0;
   }
-     /* * @brief ctor dengan parameter
-      * @param nama taman
-      * @param maxpeng maximal jumlah pengunjung  */
+  /**ctor dengan parameter
+   * @param nama taman
+   * @param maxpeng maximal jumlah pengunjung  
+   */
   public Park(String nama, int maxpeng) {
     super(nama, "Park");
     this.max_pengunjung = maxpeng;
@@ -34,28 +39,33 @@ public class Park extends Facility {
     }
     n_wahana = 0;
   }
-    /* * @brief mengakses jumlah pengunjung */
+   /**mengakses jumlah pengunjung 
+    */
   public int GetJumlahPengunjung() {
     return jumlah_pengunjung;
   }
-    /* * @brief menambahkan jumlah pengunjung yang ada di taman 
-     * @param x menambahkan pengunjung sejumlah x */
+   /** menambahkan jumlah pengunjung yang ada di taman 
+     * @param x menambahkan pengunjung sejumlah x 
+     */
   public void IncreaseJumlahPengunjung(int x) {
     jumlah_pengunjung += x;
   }
-    /* * @brief mengurangi jumlah pengunjung yang ada di taman 
-     * @param x mengurangi pengunjung sejumlah x */
+    /**mengurangi jumlah pengunjung yang ada di taman 
+     * @param x mengurangi pengunjung sejumlah x 
+     */
   public void DecreaseJumlahPengunjung(int x) {
     jumlah_pengunjung -= x;
   }
-  /* * @brief menambahkan nama wahana ke array wahana 
-     * @param nama wahana */
+  /** menambahkan nama wahana ke array wahana 
+    * @param nama wahana 
+    */
   public void AddWahana(String whn) {
     wahana[n_wahana] = whn;
     n_wahana++;
   }
-  /* * @brief menghapus wahana yang ada dalam array wahana
-     * @param nama wahana */
+  /** menghapus wahana yang ada dalam array wahana
+    * @param nama wahana 
+    */
   public void DelWahana(String whn) {
     int i = 0;
     boolean found = false;
@@ -74,7 +84,8 @@ public class Park extends Facility {
       n_wahana--;
     }
   }
-  /* * @brief memasuki taman */
+  /**memasuki taman 
+    */
   public void Enter() {
     System.out.print("\n");
     System.out.print("Di Park ini terdapat wahana: ");
@@ -97,5 +108,6 @@ public class Park extends Facility {
     System.out.print(wahana[x - 1]);
     System.out.print(", sangat seru hingga anda ingin naik lagi!");
     System.out.print("\n");
+    s.close();
   }
 }

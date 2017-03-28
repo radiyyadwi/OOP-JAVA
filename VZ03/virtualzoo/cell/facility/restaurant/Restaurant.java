@@ -1,13 +1,19 @@
 package virtualzoo.cell.facility.restaurant;
 import java.util.Scanner;
 import virtualzoo.cell.facility.Facility;
-
+/**
+ * Class yang menunjukkan restaurant
+ * @author Prama Legawa Halqavi/13515132
+ * @version 1.0, March 2017
+ */
 public class Restaurant extends Facility {
   private String[] menu; // * @brief array of menu
   private final int max_pengunjung; // * @brief nama restoran
   private int jumlah_pengunjung; // * @brief jumlah pengunjung
   private int n_menu;
-  /* ctor */
+  /**ctor tanpa parameter. 
+   * nama fasilitas diinisialisasi dengan defname 
+   */
   public Restaurant() {
     super(defname, "Restaurant");
     this.max_pengunjung = default_max_pengunjung;
@@ -18,9 +24,10 @@ public class Restaurant extends Facility {
     }
     n_menu = 0;
   }
-  /* * @brief ctor dengan parameter nama restoran 
+  /** ctor dengan parameter nama restoran 
     * @param nama restoran
-    * @param maxpeng maximal jumlah pengunjung  */
+    * @param maxpeng maximal jumlah pengunjung  
+    */
   public Restaurant(String nama, int maxpeng)
   {
     super(nama, "Restaurant");
@@ -32,24 +39,28 @@ public class Restaurant extends Facility {
     }
     n_menu = 0;
   }
-  /* * @brief menambahkan jumlah pengunjung yang ada di restoran
-     * @param x menambahkan pengunjung sejumlah x */
+  /** menambahkan jumlah pengunjung yang ada di restoran
+     * @param x menambahkan pengunjung sejumlah x 
+     */
   public void IncreaseJumlahPengunjung(int x) {
     jumlah_pengunjung += x;
   }
-  /* * @brief mengurangi jumlah pengunjung yang ada di restoran
-     * @param x mengurangi pengunjung sejumlah x */
+  /**mengurangi jumlah pengunjung yang ada di restoran
+    * @param x mengurangi pengunjung sejumlah x 
+    */
   public void DecreaseJumlahPengunjung(int x) {
     jumlah_pengunjung -= x;
   }
-  /* * @brief menambahkan menu 
-     * @param menu nama menu */
+  /**menambahkan menu 
+    * @param menu nama menu 
+    */
   public void AddMenu(String _menu) {
     menu[n_menu] = _menu;
     n_menu++;
   }
-  /* * @brief menghapus menu
-       * @param menu nama menu */
+  /**menghapus menu
+    * @param menu nama menu 
+    */
   public void DelMenu(String _menu) {
     int i = 0;
     boolean found = false;
@@ -68,11 +79,13 @@ public class Restaurant extends Facility {
       n_menu--;
     }
   }
-   /* * @brief mengakses jumlah pengunjung */
+  /**mengakses jumlah pengunjung 
+    */
   public int GetJumlahPengunjung() {
     return jumlah_pengunjung;
   }
-  /* * @brief memasuki taman */
+  /**memasuki taman 
+    */
   public void Enter() {
     System.out.print("\n");
     System.out.print("Pilihan Menu: ");
@@ -95,6 +108,7 @@ public class Restaurant extends Facility {
     System.out.print(menu[x - 1]);
     System.out.print(", rasanya lezat");
     System.out.print("\n");
+    s.close();
   }
 }
 

@@ -8,18 +8,20 @@ package virtualzoo.animal.realanimal;
 import virtualzoo.animal.Animal;
 import virtualzoo.animal.animalclass.AnimalClass;
 import virtualzoo.animal.animalfoodtype.AnimalFoodType;
-
+/** Class yang menunjukkan hewan real Okapi
+ * @author Radiyya Dwisaputra/13515023
+ * @version 1.0, March 2017
+ */
 public class Okapi extends Animal
-implements AnimalClass, AnimalFoodType
-{
+implements AnimalClass, AnimalFoodType {
   private final double defaultweight = 250;
   private final String food_type = "Herbivore";
   private final String kelas = "Mammal";
-  private final String deskripsi = "Mammalia merupakan kelas hewan vertebrata" + 
+  private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " + 
   "yang ciri utama nya memiliki kelenjar susu";
-  /** @brief Ctor objek Okapi.
-    * Terbentuk objek Okapi.
-    */ 
+  /** Constructor
+   *  @see java.lang.reflect.Constructor
+   */
   public Okapi() {
     super('o',true);
     weight = defaultweight;
@@ -29,36 +31,35 @@ implements AnimalClass, AnimalFoodType
     species_name = "Okapi";
     animal_type[0] = "Land";
   } 
-  /** @brief Method Interact objek Okapi.
-    * Menampilkan keluaran saat adanya interaksi.
-    * Interaksi dilakukan dengan pengunjung.
-    */
+  /** Interaction Okapi kepada pengunjung
+   * @see Animal#Interact()
+   */
    public void Interact() {
     System.out.println("nguuut");
     System.out.println("aku hewan yang unik lhooo, aku memiliki badan perpaduan" +
          "antara jerapah dan zebra");
   }
-  /** @brief Method IsEnemy objek Okapi.
-    * Mengecek hewan lain apakah musuh Okapi atau tidak.
-    * Musuh ialah yang tidak dapat diletakkan 1 kandang.
-    * @param hewan yang akan di cek.
-    */
-
-  /** @brief Method GedFoodType objek Okapi.
-    * Memperoleh tipe makanan yang dimakan oleh hewan.
+   /** Memperoleh type makanan animal
+    * @see Animal#GetFoodType()
+    * @see AnimalFoodType#GetFoodType()
     */
   public String GetFoodType(){
     return food_type;
   }
+  /** Memperoleh nama kelas dari animal
+   * @see AnimalClass#GetClassName()
+   */
   public String GetClassName(){
     return kelas;
   }
+  /** Memperoleh deskripsi animal 
+   * @see AnimalClass#GetDeskripsi()
+   */
   public String GetDeskripsi(){
     return deskripsi;
   }
-  /** @brief Method Deskripsi objek Okapi.
-      * Menghasilkan deskripsi tentang hewan.
-      */
+  /** Menuliskan deskripsi hewan
+   */
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

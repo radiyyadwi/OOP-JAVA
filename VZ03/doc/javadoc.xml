@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" author="true" classpath="." destdir="" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="virtualzoo.cell.facility,virtualzoo.cell.habitat.airhabitat,virtualzoo.cell,virtualzoo.cell.facility.restaurant,virtualzoo.driver,virtualzoo.cell.habitat.waterhabitat,virtualzoo.cage,virtualzoo.animal.animalclass,virtualzoo.cell.facility.road.entrance,virtualzoo.cell.facility.road.exit,virtualzoo.renderable,virtualzoo.animal.realanimal,virtualzoo.util.screencleaner,virtualzoo.cell.habitat,virtualzoo.animal,virtualzoo.animal.animalfoodtype,virtualzoo.cell.facility.road,virtualzoo.cell.habitat.landhabitat,virtualzoo.util.point,virtualzoo.zoo,virtualzoo.cell.facility.park,virtualzoo.util.mesinkar" source="1.8" sourcefiles="../Main.java" sourcepath="../" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
