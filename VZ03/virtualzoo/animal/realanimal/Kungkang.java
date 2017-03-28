@@ -8,18 +8,20 @@ package virtualzoo.animal.realanimal;
 import virtualzoo.animal.Animal;
 import virtualzoo.animal.animalclass.AnimalClass;
 import virtualzoo.animal.animalfoodtype.AnimalFoodType;
-
+/** Class yang menunjukkan hewan real Kungkang
+ * @author Radiyya Dwisaputra/13515023
+ * @version 1.0, March 2017
+ */
 public class Kungkang extends Animal
-implements AnimalClass, AnimalFoodType
-{
+implements AnimalClass, AnimalFoodType {
   private final double defaultweight = 10;
   private final String food_type = "Omnivore";
   private final String kelas = "Mammal";
-  private final String deskripsi = "Mammal merupakan kelas hewan vertebrata" + 
+  private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " + 
   "yang ciri utama nya memiliki kelenjar susu";
-  /** @brief Ctor objek Kungkang.
-    * Terbentuk objek Kungkang.
-    */ 
+  /** Constructor
+   *  @see java.lang.reflect.Constructor
+   */
   public Kungkang() {
     super('k',true);
     weight = defaultweight;
@@ -29,36 +31,35 @@ implements AnimalClass, AnimalFoodType
     species_name = "Kungkang";
     animal_type[0] = "Land";
   } 
-  /** @brief Method Interact objek Kungkang.
-    * Menampilkan keluaran saat adanya interaksi.
-    * Interaksi dilakukan dengan pengunjung.
-    */
+  /** Interaction Kungkang kepada pengunjung
+   * @see Animal#Interact()
+   */
    public void Interact() {
     System.out.println("aku gak gendut, cuman agak bulet dikit");
     System.out.println("Mammal merupakan kelas hewan vertebrata" + 
     "yang ciri utama nya memiliki kelenjar susu");
   }
-  /** @brief Method IsEnemy objek Kungkang.
-    * Mengecek hewan lain apakah musuh Kungkang atau tidak.
-    * Musuh ialah yang tidak dapat diletakkan 1 kandang.
-    * @param hewan yang akan di cek.
-    */
-
-  /** @brief Method GedFoodType objek Kungkang.
-    * Memperoleh tipe makanan yang dimakan oleh hewan.
+   /** Memperoleh type makanan animal
+    * @see Animal#GetFoodType()
+    * @see AnimalFoodType#GetFoodType()
     */
   public String GetFoodType(){
     return food_type;
   }
+  /** Memperoleh nama kelas dari animal
+   * @see AnimalClass#GetClassName()
+   */
   public String GetClassName(){
     return kelas;
   }
+  /** Memperoleh deskripsi animal 
+   * @see AnimalClass#GetDeskripsi()
+   */
   public String GetDeskripsi(){
     return deskripsi;
   }
-  /** @brief Method Deskripsi objek Kungkang.
-      * Menghasilkan deskripsi tentang hewan.
-      */
+  /** Menuliskan deskripsi hewan
+   */
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");

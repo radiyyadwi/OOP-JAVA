@@ -3,13 +3,11 @@
 package virtualzoo.animal;
 import  virtualzoo.renderable.Renderable;
 import virtualzoo.util.point.Point;
-/** @class Animal
-  * Class Animal adalah abstract class yang menjadi base class dari kelas 
-  * turunan LandAnimal. WaterAnimal, dan Flying Animal
-  */
+/** Class yang menjadi base class dari kelas turunan real animal
+ * @author FerdiGhozali/13515014
+ * @version 1.0, March 2017
+ */
 public abstract class Animal implements Renderable {
-  /** @brief Constructor.
-    */
   protected String[] enemy_list;
   protected int n_enemy = 0;
   protected final char symbol_on_map;
@@ -19,7 +17,10 @@ public abstract class Animal implements Renderable {
   protected final boolean tamed;
   protected String[] animal_type = new String[3];
   protected String species_name;
-  //ctor
+  /**
+   * Constructor object Animal
+   * @see java.lang.reflect.Constructor
+   */
   public Animal() {
     for (int i = 0;i < 3;i++) {
       animal_type[i] = new String();
@@ -31,14 +32,11 @@ public abstract class Animal implements Renderable {
       enemy_list[i] = " ";
     }
   }
-	/** @brief Constructor.
-	* Mengisi atribut Animal sesuai parameter  
-	* @param symbol_on_map simbol animal pada zoo
-	* @param pos posisi animal
-	* @param weight berat animal
-	* @param food makanan yang dibutuhkan animal
-	*/
-  // ctor berparameter
+  /**Constructor
+	  * Mengisi atribut Animal sesuai parameter  
+	  * @param symbol_on_map simbol animal pada zoo
+	  * @param is_tamed kondisi apakah animal liar atau jinak
+	  */
   public Animal(char sym_on_map, boolean is_tamed) {
     for (int i = 0;i < 3;i++) {
       animal_type[i] = new String();
@@ -50,28 +48,51 @@ public abstract class Animal implements Renderable {
       enemy_list[i] = " ";
     }
   }
+  /**
+   * Menghasilkan posisi animal
+   * @return Point posisi animal berada
+   */
   public final Point GetPosition() {
     return (position);
   }
+  /**
+   * Memperoleh nama spesies dari animal
+   * @return String nama species dari hewan 
+   */
   public final String GetSpeciesName() {
     return species_name;
   }
+  /**
+   * Memperoleh jumlah makanan dari animal
+   * @return jumlah makanan dalam double
+   */
   public final double GetFoodNum() {
     return food_per_day;
   }
+  /**
+   * Mengubah posisi animal  
+   * @param Point p posisi yang diinginkan
+   */
   public final void SetPosition(Point p) {
     position.SetX(p.GetX());
     position.SetY(p.GetY());
   }
+  /**
+   * Interaksi animal kepada pengunjung
+   */
 	public abstract void Interact();
+	
   public abstract void Deskripsi();
-  /** @brief  mengembalikan apakah hewan jinak
-  */
+  /** Mengembalikan apakah hewan jinak
+   * @return boolean true bila hewan jinak
+   */
   public final boolean IsTamed() {
     return tamed;
   }
-  /** @brief  mengembalikan boolean apakah hewan masuk dalam enemylist
-  * @param  animal nama animal
+  /**
+   * Mengecek apakah animalname musuh dari animal
+   * @param animal nama animal yang akan di cek
+   * @return boolean true bila musuh false bila tidak
   */
   public boolean IsEnemy(String animal) {
     if(!tamed)
@@ -88,15 +109,18 @@ public abstract class Animal implements Renderable {
     }
     else return false;
   }
-  /* menambahkan animal enemy ke dalam enemy list */
+  /** Menambahkan animal enemy ke dalam enemy list 
+   * @param animal_name nama hewan yang 
+   * akan ditambahkan sebagai enemy
+   */
   public void AddEnemy(String animal_name) {
     if (n_enemy < 19) {
       enemy_list[n_enemy] = animal_name;
       n_enemy++;
     }
   }
-  /** @brief  menambahkan type hewan dengan Land, Water atau Flying
-    * @param  type tipe hewan antara "Land", "Water" atau "Flying"
+  /** Menambahkan tipe hewan 
+   * @param  type tipe hewan antara "Land", "Water" atau "Flying"
   */
   public final void AddAnimalType(String type) {
 	 if (!animal_type[0].equals("Flying") && !animal_type[0].equals("Land") && !animal_type[0].equals("Water")) {
@@ -111,9 +135,10 @@ public abstract class Animal implements Renderable {
 	   }
 	 }
   }
-  /** @brief  
-    * @param  
-  */
+  /** Mengecek type yang dimiliki hewan 
+   * @param type type yang akan dicek
+   * @return boolean yes bila type itu ada 
+   */
   public final boolean IsTypeThere(String type) {
 	  boolean found = false;
 	  boolean ubah = false;
@@ -131,7 +156,13 @@ public abstract class Animal implements Renderable {
 	  }
 	  return found;
   }
+  /** Mendapatkan type makanan hewan
+   * @return type makanan dari hewan
+   */
   public abstract String GetFoodType();
+  /** Menuliskan symbol yang mewakili hewan
+   * @see Renderable#Render()
+   */
   public final void Render() {
 	  System.out.print(symbol_on_map);
   }

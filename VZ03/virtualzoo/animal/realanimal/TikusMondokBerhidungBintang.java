@@ -13,18 +13,21 @@ package virtualzoo.animal.realanimal;
 import virtualzoo.animal.Animal;
 import virtualzoo.animal.animalclass.AnimalClass;
 import virtualzoo.animal.animalfoodtype.AnimalFoodType;
-
+/** Class yang menunjukkan hewan real TikusMondokBerhidungBintang
+ * @author Radiyya Dwisaputra/13515023
+ * @version 1.0, March 2017
+ */
 public class TikusMondokBerhidungBintang extends Animal
 implements AnimalClass, AnimalFoodType
 {
   private final double defaultweight = 0.1;
   private final String food_type = "Carnivore";
   private final String kelas = "Mammal";
-  private final String deskripsi = "Mammalia merupakan kelas hewan vertebrata" + 
+  private final String deskripsi = "Mammal merupakan kelas hewan vertebrata " + 
   "yang ciri utama nya memiliki kelenjar susu";
-  /** @brief Ctor objek TikusMondokBerhitungBintang.
-    * Terbentuk objek TikusMondokBerhitungBintang.
-    */ 
+  /** Constructor
+   *  @see java.lang.reflect.Constructor
+   */
   public TikusMondokBerhidungBintang() {
     weight = defaultweight;
     food_per_day = weight/4;
@@ -34,35 +37,34 @@ implements AnimalClass, AnimalFoodType
     animal_type[0] = "Land";
     animal_type[1] = "Water";
   } 
-  /** @brief Method Interact objek TikusMondokBerhitungBintang.
-    * Menampilkan keluaran saat adanya interaksi.
-    * Interaksi dilakukan dengan pengunjung.
-    */
+  /** Interaction TikusMondokBerhidungBintang kepada pengunjung
+   * @see Animal#Interact()
+   */
    public void Interact() {
     System.out.println("Hidung bintangku sebenarnya adalah alat sensor yang " +
     "dapat mendeteksi gelombang seismic");
   }
-  /** @brief Method IsEnemy objek TikusMondokBerhitungBintang.
-    * Mengecek hewan lain apakah musuh TikusMondokBerhitungBintang atau tidak.
-    * Musuh ialah yang tidak dapat diletakkan 1 kandang.
-    * @param hewan yang akan di cek.
-    */
-
-  /** @brief Method GedFoodType objek TikusMondokBerhitungBintang.
-    * Memperoleh tipe makanan yang dimakan oleh hewan.
+   /** Memperoleh type makanan animal
+    * @see Animal#GetFoodType()
+    * @see AnimalFoodType#GetFoodType()
     */
   public String GetFoodType(){
     return food_type;
   }
+  /** Memperoleh nama kelas dari animal
+   * @see AnimalClass#GetClassName()
+   */
   public String GetClassName(){
     return kelas;
   }
+  /** Memperoleh deskripsi animal 
+   * @see AnimalClass#GetDeskripsi()
+   */
   public String GetDeskripsi(){
     return deskripsi;
   }
-  /** @brief Method Deskripsi objek TikusMondokBerhitungBintang.
-      * Menghasilkan deskripsi tentang hewan.
-      */
+  /** Menuliskan deskripsi hewan
+   */
   public void Deskripsi(){
     System.out.print(super.GetSpeciesName());
     System.out.print(" termasuk dalam kelas ");
