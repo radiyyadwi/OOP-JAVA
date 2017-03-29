@@ -45,7 +45,7 @@ public class AnimalClassTest {
         System.out.print("GetDeskripsi");
         AnimalClass instance = new AnimalClassImpl();
         String expResult = "";
-        String result = instance.GetDeskripsi();
+        String result = instance.getDeskripsi();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -58,18 +58,18 @@ public class AnimalClassTest {
         System.out.print("GetClassName");
         AnimalClass instance = new AnimalClassImpl();
         String expResult = "";
-        String result = instance.GetClassName();
+        String result = instance.getClassName();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
 
     public class AnimalClassImpl implements AnimalClass {
 
-        public String GetDeskripsi() {
+        public String getDeskripsi() {
             return "";
         }
 
-        public String GetClassName() {
+        public String getClassName() {
             return "";
         }
     }

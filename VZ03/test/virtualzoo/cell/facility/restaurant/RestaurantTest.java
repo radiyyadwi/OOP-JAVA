@@ -45,7 +45,7 @@ public class RestaurantTest {
         System.out.print("IncreaseJumlahPengunjung");
         int x = 0;
         Restaurant instance = new Restaurant();
-        instance.IncreaseJumlahPengunjung(x);
+        instance.increaseJumlahPengunjung(x);
         System.out.print("berhasil");
     }
 
@@ -57,7 +57,7 @@ public class RestaurantTest {
         System.out.print("DecreaseJumlahPengunjung");
         int x = 0;
         Restaurant instance = new Restaurant();
-        instance.DecreaseJumlahPengunjung(x);
+        instance.decreaseJumlahPengunjung(x);
         System.out.print("berhasil");
     }
 
@@ -69,7 +69,7 @@ public class RestaurantTest {
         System.out.print("AddMenu");
         String _menu = "";
         Restaurant instance = new Restaurant();
-        instance.AddMenu(_menu);
+        instance.addMenu(_menu);
         System.out.print("berhasil");
     }
 
@@ -81,7 +81,7 @@ public class RestaurantTest {
         System.out.print("DelMenu");
         String _menu = "";
         Restaurant instance = new Restaurant();
-        instance.DelMenu(_menu);
+        instance.delMenu(_menu);
         System.out.print("berhasil");
     }
 
@@ -93,7 +93,7 @@ public class RestaurantTest {
         System.out.print("GetJumlahPengunjung");
         Restaurant instance = new Restaurant();
         int expResult = 0;
-        int result = instance.GetJumlahPengunjung();
+        int result = instance.getJumlahPengunjung();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }

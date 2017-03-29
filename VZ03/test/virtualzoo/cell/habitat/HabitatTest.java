@@ -46,7 +46,7 @@ public class HabitatTest {
         System.out.print("GetFacHabType");
         Habitat instance = new WaterHabitat();
         String expResult = "Water";
-        String result = instance.GetFacHabType();
+        String result = instance.getFacHabType();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -58,7 +58,7 @@ public class HabitatTest {
     public void testRender_0args() {
         System.out.print("Render");
         Habitat instance = new WaterHabitat();
-        instance.Render();
+        instance.render();
         System.out.print("berhasil");
     }
 
@@ -70,7 +70,7 @@ public class HabitatTest {
         System.out.print("Render");
         boolean oncage = false;
         Habitat instance = new WaterHabitat();
-        instance.Render(oncage);
+        instance.render(oncage);
         System.out.print("berhasil");
     }
 
@@ -81,7 +81,7 @@ public class HabitatTest {
     public void testEnter() {
         System.out.print("Enter");
         Habitat instance = new WaterHabitat();
-        instance.Enter();
+        instance.enter();
         System.out.print("berhasil");
     }
     

@@ -44,13 +44,13 @@ public class RenderableTest {
     public void testRender() {
         System.out.print("Render");
         Renderable instance = new RenderableImpl();
-        instance.Render();
+        instance.render();
         System.out.print("berhasil");
     }
 
     public class RenderableImpl implements Renderable {
 
-        public void Render() {
+        public void render() {
         }
     }
     

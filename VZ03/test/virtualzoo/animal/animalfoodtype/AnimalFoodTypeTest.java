@@ -45,14 +45,14 @@ public class AnimalFoodTypeTest {
         System.out.print("GetFoodType");
         AnimalFoodType instance = new AnimalFoodTypeImpl();
         String expResult = "";
-        String result = instance.GetFoodType();
+        String result = instance.getFoodType();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
 
     public class AnimalFoodTypeImpl implements AnimalFoodType {
 
-        public String GetFoodType() {
+        public String getFoodType() {
             return "";
         }
     }

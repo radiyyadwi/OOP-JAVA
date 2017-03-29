@@ -45,7 +45,7 @@ public class FacilityTest {
         System.out.print("GetFacHabType");
         Facility instance = new FacilityImpl();
         String expResult = "The Facility";
-        String result = instance.GetFacHabType();
+        String result = instance.getFacHabType();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -58,7 +58,7 @@ public class FacilityTest {
         System.out.print("GetFacilityName");
         Facility instance = new FacilityImpl();
         String expResult = "The Facility";
-        String result = instance.GetFacilityName();
+        String result = instance.getFacilityName();
         assertEquals(expResult, result);
         System.out.print("berhasil");
     }
@@ -71,7 +71,7 @@ public class FacilityTest {
         System.out.print("Render");
         boolean oncage = false;
         Facility instance = new FacilityImpl();
-        instance.Render(oncage);
+        instance.render(oncage);
         System.out.print("berhasil");
     }
 
@@ -82,14 +82,14 @@ public class FacilityTest {
     public void testRender_0args() {
         System.out.print("Render");
         Facility instance = new FacilityImpl();
-        instance.Render();
+        instance.render();
         System.out.print("berhasil");
     }
 
     public class FacilityImpl extends Facility {
 
         @Override
-        public void Enter() {
+        public void enter() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
